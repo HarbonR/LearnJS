@@ -26,7 +26,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 10px;
     text-align: justify;
 }
 .container > div{
@@ -41,6 +41,13 @@
     cursor: pointer;
     margin-right: 10px;
     text-align: center;
+}
+#exit{
+    display: flex;
+    flex-direction: row;
+}
+#exit > img{
+    width: 25px;
 }
 /* ==================================================================================================== */
 /* Главная страница */

@@ -1,7 +1,7 @@
 //====================================================================================================
 // Переменные
 let logo = document.getElementById("logo");
-let javaScriptBasics = document.getElementById("javaScriptBasics");
+let javaScriptGuide = document.getElementById("javaScriptGuide");
 let practice = document.getElementById("practice");
 let aboutTheSite = document.getElementById("aboutTheSite");
 //====================================================================================================
@@ -16,7 +16,7 @@ logo.onclick = function(){
 
     practice.classList.remove("menuActive");
     aboutTheSite.classList.remove("menuActive");
-    javaScriptBasics.classList.remove("menuActive");
+    javaScriptGuide.classList.remove("menuActive");
 
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
@@ -27,17 +27,17 @@ logo.onclick = function(){
 }
 //====================================================================================================
 // Основы JavaSript
-javaScriptBasics.onclick = function(){
+javaScriptGuide.onclick = function(){
 
     practice.classList.remove("menuActive");
     aboutTheSite.classList.remove("menuActive");
-    javaScriptBasics.classList.add("menuActive");
+    javaScriptGuide.classList.add("menuActive");
 
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
         body.innerHTML = this.responseText;
     };
-    xhr.open('GET', '../Pages/javaScriptBasics.php');
+    xhr.open('GET', '../Pages/javaScriptGuide.php');
     xhr.send();
 }
 //====================================================================================================
@@ -46,7 +46,7 @@ practice.onclick = function(){
 
     practice.classList.add("menuActive");
     aboutTheSite.classList.remove("menuActive");
-    javaScriptBasics.classList.remove("menuActive");
+    javaScriptGuide.classList.remove("menuActive");
 
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
@@ -61,7 +61,7 @@ aboutTheSite.onclick = function(){
 
     practice.classList.remove("menuActive");
     aboutTheSite.classList.add("menuActive");
-    javaScriptBasics.classList.remove("menuActive");
+    javaScriptGuide.classList.remove("menuActive");
 
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {

@@ -66,13 +66,13 @@
             </form>
         </div>
         <div class="background">
-            
+            <img src="/Picture/Logo.svg" alt="Logo">
         </div>
     </div>
     <div id="menu">
         <img id="logo" src="/Picture/Logo.svg" alt="Logo">
-        <div id="javaScriptBasics" class="text">
-            Основы JavaSript
+        <div id="javaScriptGuide" class="text">
+            Руководство по JavaScript
         </div>
         <div id="practice" class="text">
             Практика
@@ -85,6 +85,12 @@
         <div id="containerLogoEnterRegister">
             <div id="logoEnterRegister">
                 Вход / <br> Регистрация
+            </div>
+            <div id="exit" style = "display: none;">
+                <img class="var" src="/Picture/ExitFromAccount.svg" alt="">
+                <div id="user">
+
+                </div>
             </div>
         </div>
         <div id="body" class="text">

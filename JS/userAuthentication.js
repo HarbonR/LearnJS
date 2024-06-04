@@ -9,15 +9,15 @@ let formEnter = document.getElementById("form-enter"); //
 let buttonFormEnter = document.getElementById("button-form-enter"); //
 let createAccount = document.getElementById("create-account"); //
 //--------------------------------------------------
-let menu = document.getElementById("menu"); // Скрыть
-let logoEnterRegister = document.getElementById("logoEnterRegister"); // Скрыть
+let menu = document.getElementById("menu"); // 
+let logoEnterRegister = document.getElementById("logoEnterRegister"); // 
 //--------------------------------------------------
-let bodyContainer = document.getElementById("bodyContainer"); // Скрыть
+let bodyContainer = document.getElementById("bodyContainer"); // 
 let enterRegisterExitEnter = document.getElementById("enter-register_exit-enter"); //
 let enterRegisterExitRegister = document.getElementById("enter-register_exit-register"); // 
 //--------------------------------------------------
-//let user = document.getElementById("user"); // Скрыть
-//let exit = document.getElementById("exit"); // Скрыть
+let user = document.getElementById("user"); // 
+let exit = document.getElementById("exit"); // 
 //--------------------------------------------------
 let emailInput = document.getElementById("email-input"); //
 let passwordInput = document.getElementById("password-input"); // 
@@ -179,11 +179,10 @@ buttonFormEnter.onclick = function(event)
                     menu.removeAttribute("style");
                     bodyContainer.removeAttribute("style");
                     enterRegister.setAttribute("style","display:none;");
-                    //exit.removeAttribute("style");
+                    exit.removeAttribute("style");
                     sessionStorage.setItem("exit", "true"); // Задаем что кнопка выхода стала активной
                     user.textContent = data.userName;
                     logoEnterRegister.style.display = "none";
-                    menuPersonalArea.removeAttribute("style");
                 }
                 else if(data.answer == "Не правильный пароль")
                 {
@@ -212,36 +211,34 @@ buttonFormEnter.onclick = function(event)
 }
 //==================================================
 // Функция для отправки данных о пользователе
-// let xhrData = new XMLHttpRequest(); // Создаем новый объект XMLHttpRequest
-// xhrData.onreadystatechange = function() // Устанавливаем функцию, которая будет вызываться при изменении состояния объекта `xhr`
-// {
-//     if (xhrData.readyState === 4 && xhrData.status === 200) // Проверяем, что запрос завершен и успешен
-//     {
-//         if (xhrData.responseText)
-//         {
-//             let userData = JSON.parse(xhrData.responseText);
-//             //exit.removeAttribute("style");
-//             sessionStorage.setItem("exit", "true"); // Задаем что кнопка выхода стала активной
-//             user.removeAttribute("style");
-//             logoEnterRegister.style.display = "none";
-//             menuPersonalArea.removeAttribute("style");
-//             user.textContent = userData.userName;
-//         }
-//     }
-// };
-// xhrData.open("POST", "../PHP/registrationDate.php"); // Открываем соединение с сервером с помощью метода "POST" и адреса "cards.php"
-// xhrData.send(); // Отправляем запрос на сервер
+let xhrData = new XMLHttpRequest(); // Создаем новый объект XMLHttpRequest
+xhrData.onreadystatechange = function() // Устанавливаем функцию, которая будет вызываться при изменении состояния объекта `xhr`
+{
+    if (xhrData.readyState === 4 && xhrData.status === 200) // Проверяем, что запрос завершен и успешен
+    {
+        if (xhrData.responseText)
+        {
+            let userData = JSON.parse(xhrData.responseText);
+            exit.removeAttribute("style");
+            sessionStorage.setItem("exit", "true"); // Задаем что кнопка выхода стала активной
+            user.removeAttribute("style");
+            logoEnterRegister.style.display = "none";
+            user.textContent = userData.userName;
+        }
+    }
+};
+xhrData.open("POST", "../PHP/registrationDate.php"); // Открываем соединение с сервером с помощью метода "POST" и адреса "cards.php"
+xhrData.send(); // Отправляем запрос на сервер
 //==================================================
 // Функция для обработки кнопки выход
-// exit.onclick = function()
-// {
-//     let xhr = new XMLHttpRequest();
-//     xhr.open('GET', '../PHP/exit.php'); // Установлен параметр async в true
-//     xhr.send();
-//     exit.style.display = "none";
-//     sessionStorage.removeItem("exit");
-//     logoEnterRegister.removeAttribute("style");
-//     menuPersonalArea.style.display = "none";
-//     menu__cards.click();
-// }
+exit.onclick = function()
+{
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', '../PHP/exit.php'); // Установлен параметр async в true
+    xhr.send();
+    exit.style.display = "none";
+    sessionStorage.removeItem("exit");
+    logoEnterRegister.removeAttribute("style");
+    logo.click();
+}
 //==================================================

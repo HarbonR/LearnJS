@@ -4,80 +4,15 @@
 <div class="container">
     <div>
         <img class="var" src="/Picture/Variable.svg" alt="">
-        Основы JavaSript - В этом разделе вы найдете
+        Руководство по JavaScript - В этом разделе вы найдете всю нужную информацию для всех уровней знания языка. Подойдет как новичку так и профессионалу.
     </div>
     <div>
         <img class="var" src="/Picture/Variable.svg" alt="">
-        Практика - В этом разделе вы можете
+        Практика - В этом разделе вы можете потренироваться выполняя тесты на знания языка программирования JavaScript и получая за это балы которые 
+        можно отслеживать в личном кабинете пользователя.
     </div>
     <div>
         <img class="var" src="/Picture/Variable.svg" alt="">
         О сайте - Здесь вы найдете контактную информацию для связи с авторами
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit corrupti dignissimos esse
-        , provident dolore numquam veritatis deleniti aliquam omnis animi eius consequatur quia dolores necessitatibus, amet accusantium saepe, ut tempore?
     </div>
 </div>
