@@ -63,6 +63,23 @@
     background-color: #6CA300;
     margin-left: 5px;
 }
+.buttonTakeTheTest{
+    width: 100px;
+    background-color: #BCAA00;
+    margin-left: 5px;
+}
+.questionElement{
+    display: flex;
+    flex-direction: column;
+}
+.questionElement > label{
+    display: flex;
+    flex-direction: row;
+}
+.questionElement > label > input{
+    width: auto;
+    height: auto;
+}
 /* ==================================================================================================== */
 /* О сайте */
 

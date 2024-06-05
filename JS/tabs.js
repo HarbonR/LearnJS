@@ -56,6 +56,7 @@ practice.onclick = function(){
     xhr.onload = function() {
         body.innerHTML = this.responseText;
         getLaboratoryWork();
+        getTest();
     };
     xhr.open('GET', '../Pages/practice.php');
     xhr.send();
