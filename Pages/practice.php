@@ -1,6 +1,12 @@
 <div class="title">
-    Тесты по главам
+    Лабораторные работы
 </div>
-<div class="container">
+<div id="containerForLaboratoryWorks" class="container">
+    
+</div>
+<div class="title">
+    Тесты
+</div>
+<div id="containerForTests" class="container">
     
 </div>

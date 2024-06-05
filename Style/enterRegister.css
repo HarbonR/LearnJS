@@ -31,6 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 10px;
 }
 #form-form-enter{
     display: flex;
@@ -51,6 +52,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 10px;
 }
 #form-form-register{
     display: flex;

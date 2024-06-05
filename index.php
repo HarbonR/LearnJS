@@ -80,6 +80,9 @@
         <div id="aboutTheSite" class="text">
             О сайте
         </div>
+        <div id="personalArea" class="text">
+            Личный кабинет
+        </div>
     </div>
     <div id="bodyContainer">
         <div id="containerLogoEnterRegister">
@@ -100,5 +103,7 @@
     <script src="/JS/body.js"></script>
     <script src="/JS/tabs.js"></script>
     <script src="/JS/userAuthentication.js"></script>
+    <script src="/JS/practice.js"></script>
+    <script src="/JS/personalArea.js"></script>
 </body>
 </html>

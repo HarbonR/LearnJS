@@ -180,7 +180,7 @@ buttonFormEnter.onclick = function(event)
                     bodyContainer.removeAttribute("style");
                     enterRegister.setAttribute("style","display:none;");
                     exit.removeAttribute("style");
-                    sessionStorage.setItem("exit", "true"); // Задаем что кнопка выхода стала активной
+                    personalArea.style.display = "block";
                     user.textContent = data.userName;
                     logoEnterRegister.style.display = "none";
                 }
@@ -220,8 +220,8 @@ xhrData.onreadystatechange = function() // Устанавливаем функц
         {
             let userData = JSON.parse(xhrData.responseText);
             exit.removeAttribute("style");
-            sessionStorage.setItem("exit", "true"); // Задаем что кнопка выхода стала активной
             user.removeAttribute("style");
+            personalArea.style.display = "block";
             logoEnterRegister.style.display = "none";
             user.textContent = userData.userName;
         }
@@ -237,8 +237,8 @@ exit.onclick = function()
     xhr.open('GET', '../PHP/exit.php'); // Установлен параметр async в true
     xhr.send();
     exit.style.display = "none";
-    sessionStorage.removeItem("exit");
     logoEnterRegister.removeAttribute("style");
+    personalArea.style.display = "none";
     logo.click();
 }
 //==================================================
