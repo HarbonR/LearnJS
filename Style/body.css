@@ -13,16 +13,12 @@
     display: none;
 }
 .text{  
-    color: #F8F8F2;
+    color: black;
     font-size: large;
 }
 .title{
     text-align: center;
     font-size: 30pt;
-}
-.var{
-    width: 40px;
-    margin-right: 5px;
 }
 .container{
     display: flex;
@@ -36,7 +32,7 @@
 #containerLogoEnterRegister{
     display: flex;
     justify-content: flex-end;
-    color: #AE81FF;
+    color: black;
     font-size: 15pt;
     font-weight: 600;
     cursor: pointer;
@@ -83,4 +79,12 @@
 /* ==================================================================================================== */
 /* О сайте */
 
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* Личный кабинет */
+.inputDownloadLaboratoryWork{
+    border: none;
+    width: auto;
+    margin-left: 10px;
+}
 /* ==================================================================================================== */

@@ -1,6 +1,7 @@
 //====================================================================================================
 // Переменные
 let logo = document.getElementById("logo");
+let logicProgrammingInJavaScript = document.getElementById("logicProgrammingInJavaScript");
 let javaScriptGuide = document.getElementById("javaScriptGuide");
 let practice = document.getElementById("practice");
 let aboutTheSite = document.getElementById("aboutTheSite");
@@ -12,6 +13,23 @@ window.addEventListener('load', function()
     logo.click();
 });
 //====================================================================================================
+// Логическое программирование в JavaScript
+logicProgrammingInJavaScript.onclick = function(){
+
+    practice.classList.remove("menuActive");
+    aboutTheSite.classList.remove("menuActive");
+    javaScriptGuide.classList.remove("menuActive");
+    personalArea.classList.remove("menuActive");
+    logicProgrammingInJavaScript.classList.add("menuActive");
+
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+        body.innerHTML = this.responseText;
+    };
+    xhr.open('GET', '../Pages/logicProgrammingInJavaScript.php');
+    xhr.send();
+}
+//====================================================================================================
 // Лого
 logo.onclick = function(){
 
@@ -19,6 +37,7 @@ logo.onclick = function(){
     aboutTheSite.classList.remove("menuActive");
     javaScriptGuide.classList.remove("menuActive");
     personalArea.classList.remove("menuActive");
+    logicProgrammingInJavaScript.classList.remove("menuActive");
 
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
@@ -28,13 +47,14 @@ logo.onclick = function(){
     xhr.send();
 }
 //====================================================================================================
-// Основы JavaSript
+// Руководство по JavaScript
 javaScriptGuide.onclick = function(){
 
     practice.classList.remove("menuActive");
     aboutTheSite.classList.remove("menuActive");
     javaScriptGuide.classList.add("menuActive");
     personalArea.classList.remove("menuActive");
+    logicProgrammingInJavaScript.classList.remove("menuActive");
 
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
@@ -51,6 +71,7 @@ practice.onclick = function(){
     aboutTheSite.classList.remove("menuActive");
     javaScriptGuide.classList.remove("menuActive");
     personalArea.classList.remove("menuActive");
+    logicProgrammingInJavaScript.classList.remove("menuActive");
 
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
@@ -69,6 +90,7 @@ aboutTheSite.onclick = function(){
     aboutTheSite.classList.add("menuActive");
     javaScriptGuide.classList.remove("menuActive");
     personalArea.classList.remove("menuActive");
+    logicProgrammingInJavaScript.classList.remove("menuActive");
 
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
@@ -85,10 +107,12 @@ personalArea.onclick = function(){
     aboutTheSite.classList.remove("menuActive");
     javaScriptGuide.classList.remove("menuActive");
     personalArea.classList.add("menuActive");
+    logicProgrammingInJavaScript.classList.remove("menuActive");
 
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
         body.innerHTML = this.responseText;
+        userPersonalAccount();
     };
     xhr.open('GET', '../Pages/personalArea.php');
     xhr.send();

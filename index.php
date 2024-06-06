@@ -71,6 +71,9 @@
     </div>
     <div id="menu">
         <img id="logo" src="/Picture/Logo.svg" alt="Logo">
+        <div id="logicProgrammingInJavaScript" class="text">
+            Логическое программирование в JavaScript
+        </div>
         <div id="javaScriptGuide" class="text">
             Руководство по JavaScript
         </div>
@@ -87,7 +90,7 @@
     <div id="bodyContainer">
         <div id="containerLogoEnterRegister">
             <div id="logoEnterRegister">
-                Вход / <br> Регистрация
+                Вход / Регистрация
             </div>
             <div id="exit" style = "display: none;">
                 <img class="var" src="/Picture/ExitFromAccount.svg" alt="">

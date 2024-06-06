@@ -21,10 +21,6 @@ function downloadFileFromServer(path, nameFile){
 function createLaboratoryWork(subject, fileLink){
     let laboratoryWork = document.createElement("div");
 
-    let svgVar = document.createElement("img");
-    svgVar.className = "var";
-    svgVar.src = "/Picture/Variable.svg";
-
     let elementSubject = document.createTextNode(subject);
 
     let buttonDownloadLaboratoryWork = document.createElement("button");
@@ -34,7 +30,6 @@ function createLaboratoryWork(subject, fileLink){
         downloadFileFromServer(fileLink, subject);
     }
 
-    laboratoryWork.appendChild(svgVar);
     laboratoryWork.appendChild(elementSubject);
     laboratoryWork.appendChild(buttonDownloadLaboratoryWork);
 
@@ -45,20 +40,15 @@ function createLaboratoryWork(subject, fileLink){
 function createTest(jsonDataTest, jsonDataQuestion){
     let test = document.createElement("div");
 
-    let svgVar = document.createElement("img");
-    svgVar.className = "var";
-    svgVar.src = "/Picture/Variable.svg";
-
     let elementSubject = document.createTextNode(jsonDataTest.subject);
 
     let buttonTakeTheTest = document.createElement("button");
     buttonTakeTheTest.className = "buttonTakeTheTest";
     buttonTakeTheTest.textContent = "Пройти тест";
     buttonTakeTheTest.onclick = function(){
-        createPassingTheTest(jsonDataTest.subject, jsonDataQuestion);
+        createPassingTheTest(jsonDataTest.id, jsonDataTest.subject, jsonDataQuestion);
     }
 
-    test.appendChild(svgVar);
     test.appendChild(elementSubject);
     test.appendChild(buttonTakeTheTest);
 
@@ -66,7 +56,7 @@ function createTest(jsonDataTest, jsonDataQuestion){
 }
 //--------------------------------------------------
 // Функция для создания прохождения тестов
-function createPassingTheTest(subject, jsonDataQuestion) {
+function createPassingTheTest(testId, subject, jsonDataQuestion) {
     let body = document.getElementById('body');
     body.innerHTML = ""; // Очищаем контейнер перед добавлением новых карточек
   
@@ -76,7 +66,6 @@ function createPassingTheTest(subject, jsonDataQuestion) {
   
       // Получаем все выбранные ответы
       let label = form.getElementsByTagName("label");
-      console.log(label);
 
       // Получаем label внутри которых input имеет checked
       let checkedLabels = Array.from(label).filter(label => {
@@ -84,8 +73,22 @@ function createPassingTheTest(subject, jsonDataQuestion) {
         return input && input.checked;
       });
 
-      
+      let countQuestions = checkedLabels.length;
+      let counterCorrectAnswer = 0;
 
+      for(let i = 0; i < jsonDataQuestion.length; i++)
+      {
+          if(jsonDataQuestion[i].correctAnswer == checkedLabels[i].textContent)
+          {
+            counterCorrectAnswer++;
+          }
+      }
+      console.log(testId);
+      let xhr = new XMLHttpRequest(); // Создаем новый объект XMLHTTPrequest
+      xhr.open("POST", "../PHP/userTestAdd.php", true); 
+      // Отправляем запрос на сервер
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // Устанавливаем заголовок Content-Type
+      xhr.send("testId=" + encodeURIComponent(testId) + "&testScore=" + encodeURIComponent(counterCorrectAnswer * 100 / countQuestions));
     });
   
     let fieldset = document.createElement('fieldset');

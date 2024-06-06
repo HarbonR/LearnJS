@@ -3,8 +3,7 @@
 </div>
 <div class="container">
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 1. Введение в JavaScript
+        <b>Глава 1. Введение в JavaScript</b>
         <ul>
             <li>Что такое JavaScript</li>
             <li>Первая программа на JavaScript</li>
@@ -14,8 +13,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 2. Основы javascript
+        <b>Глава 2. Основы javascript</b>
         <ul>
             <li>Переменные и константы</li>
             <li>Типы данных</li>
@@ -31,8 +29,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 3. Функциональное программирование
+        <b>Глава 3. Функциональное программирование</b>
         <ul>
             <li>Функции</li>
             <li>Параметры функции</li>
@@ -48,8 +45,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 4. Объектно-ориентированное программирование
+        <b>Глава 4. Объектно-ориентированное программирование</b>
         <ul>
             <li>Объекты</li>
             <li>Ключевое слово this</li>
@@ -70,8 +66,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 5. ООП. Классы
+        <b>Глава 5. ООП. Классы</b>
         <ul>
             <li>Классы</li>
             <li>Приватные поля и методы</li>
@@ -81,8 +76,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 6. Массивы
+        <b>Глава 6. Массивы</b>
         <ul>
             <li>Создание массива и объект Array</li>
             <li>Массивы и spread-оператор</li>
@@ -91,8 +85,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 7. Строки и регулярные выражения
+        <b>Глава 7. Строки и регулярные выражения</b>
         <ul>
             <li>Строки и объект String</li>
             <li>Шаблоны строк</li>
@@ -105,8 +98,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 8. Обработка ошибок
+        <b>Глава 8. Обработка ошибок</b>
         <ul>
             <li>Конструкция try..catch..finally</li>
             <li>Генерация ошибок и оператор throw</li>
@@ -115,8 +107,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 9. Встроенные объекты
+        <b>Глава 9. Встроенные объекты</b>
         <ul>
             <li>Объект Date. Работа с датами</li>
             <li>Объект Math. Математические операции</li>
@@ -126,8 +117,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 10. Коллекции и итераторы
+        <b>Глава 10. Коллекции и итераторы</b>
         <ul>
             <li>Итераторы</li>
             <li>Генераторы</li>
@@ -138,8 +128,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 11. Работа с DOM
+        <b>Глава 11. Работа с DOM</b>
         <ul>
             <li>Введение в DOM</li>
             <li>Свойства объекта document</li>
@@ -153,8 +142,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 12. События
+        <b>Глава 12. События</b>
         <ul>
             <li>Введение в обработку событий</li>
             <li>Обработчики событий</li>
@@ -167,8 +155,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 13. Работа с формами
+        <b>Глава 13. Работа с формами</b>
         <ul>
             <li>Формы и их элементы</li>
             <li>Кнопки</li>
@@ -180,8 +167,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 14. Работа с браузером и BOM
+        <b>Глава 14. Работа с браузером и BOM</b>
         <ul>
             <li>Browser Object Model и объект window</li>
             <li>Диалоговые окна и поиск на странице</li>
@@ -193,24 +179,21 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 15. Форматы JSON и XML
+        <b>Глава 15. Форматы JSON и XML</b>
         <ul>
             <li>Работа с JSON</li>
             <li>Работа с XML</li>
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 16. Хранение данных
+        <b>Глава 16. Хранение данных</b>
         <ul>
             <li>Куки</li>
             <li>Web Storage</li>
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 17. Асинхронность, promise, async и await
+        <b>Глава 17. Асинхронность, promise, async и await</b>
         <ul>
             <li>Асинхронные функции и коллбеки</li>
             <li>Введение в промисы</li>
@@ -224,8 +207,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 18. AJAX-запросы и XMLHttpRequest
+        <b>Глава 18. AJAX-запросы и XMLHttpRequest</b>
         <ul>
             <li>XMLHttpRequest и отправка ajax-запросов</li>
             <li>Загрузка HTML с помощью XMLHttpRequest</li>
@@ -237,8 +219,7 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 19. Fetch API
+        <b>Глава 19. Fetch API</b>
         <ul>
             <li>Функция fetch</li>
             <li>Объект Response и его свойства</li>
@@ -248,116 +229,10 @@
         </ul>
     </div>
     <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 20. Web Socket API и Server-Sent Events
+        <b>Глава 20. Web Socket API и Server-Sent Events</b>
         <ul>
             <li>Web Socket API</li>
             <li>Server-Sent Events</li>
         </ul>
     </div>
-    <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 21. Локализация
-        <ul>
-            <li>Введение в Internationalization API</li>
-            <li>Локализация списков и Intl.ListFormat</li>
-            <li>Локализация дат и времени</li>
-            <li>Локализация названий и Intl.DisplayNames</li>
-            <li>Форматирование чисел и Intl.NumberFormat</li>
-            <li>Int.Collator и сравнение строк</li>
-        </ul>
-    </div>
-    <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 22. Модули
-        <ul>
-            <li>Введение в модули</li>
-            <li>Импорт модуля</li>
-            <li>Экспорт и импорт компонентов модулей</li>
-            <li>Экспорт и импорт по умолчанию</li>
-            <li>Использование псевдонимов при экспорте и импорте</li>
-            <li>Динамическая загрузка модулей</li>
-        </ul>
-    </div>
-    <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 23. Canvas API
-        <ul>
-            <li>Canvas и его контекст. Рисование прямоугольников</li>
-            <li>Настройка рисования</li>
-            <li>Фоновые изображения</li>
-            <li>Создание градиента</li>
-            <li>Рисование текста</li>
-            <li>Рисование фигур</li>
-            <li>Рисование изображений</li>
-            <li>Добавление теней</li>
-            <li>Редактирование пикселей</li>
-            <li>Трансформации</li>
-            <li>Рисование мышью</li>
-            <li>Сохранение и восстановление состояния canvas</li>
-            <li>Анимация на canvas</li>
-        </ul>
-    </div>
-    <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 24. IndexDB API
-        <ul>
-            <li>Создание, открытие и удаление базы данных</li>
-            <li>Управление базой данных в IndexedDB</li>
-            <li>Выполнение запросов к базе данных</li>
-            <li>Добавление объектов в хранилище</li>
-            <li>Получение данных из IndexDB</li>
-            <li>Обновление объектов хранилища</li>
-            <li>Получение количества объектов</li>
-            <li>Удаление данных из хранилища</li>
-            <li>Курсоры</li>
-        </ul>
-    </div>
-    <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 25. Drag-and-Drop API
-        <ul>
-            <li>Перетаскивание элементов с помощью Drag-and-Drop API</li>
-            <li>Установка и послучение перетаскиваемых данных с помощью DataTransfer</li>
-        </ul>
-    </div>
-    <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 26. File API
-        <ul>
-            <li>Загрузка файлов</li>
-            <li>Чтение файлов с FileReader</li>
-            <li>Отслеживание процесса загрузки файла</li>
-        </ul>
-    </div>
-    <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 27. Web Worker API
-        <ul>
-            <li>Определение и выполнение веб-воркера</li>
-            <li>Обмен сообщениями между веб-воркером и основным потоком</li>
-        </ul>
-    </div>
-    <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 28. Дополнительные Web API
-        <ul>
-            <li>Geolocation API</li>
-            <li>Battery Status API</li>
-            <li>Web Speech API. Синтез речи</li>
-            <li>Web Speech API. Распознавание речи</li>
-            <li>Web Animation API</li>
-        </ul>
-    </div>
-
-    <div>
-        <img class="var" src="/Picture/Variable.svg" alt="">
-        Глава 29.Дополнительные статьи
-        <ul>
-            <li>Паттерн пространство имен</li>
-            <li>Паттерн Модуль</li>
-            <li>JavaScript в CSS</li>
-        </ul>
-    </div>
-    <br>
 </div>

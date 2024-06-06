@@ -66,21 +66,21 @@ function validateFormForRegister()
     if (nameRegister.value === "")
     {
         nameRegister.style.borderColor = "#8A666A";
-        nameRegister.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: F8F8F2;'>Поле не заполнено</p>");
+        nameRegister.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: black;'>Поле не заполнено</p>");
         isValid = false;
     }
 
     if (emailRegister.value === "")
     {
         emailRegister.style.borderColor = "#8A666A";
-        emailRegister.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: F8F8F2;'>Поле не заполнено</p>");
+        emailRegister.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: black;'>Поле не заполнено</p>");
         isValid = false;
     }
 
     if (passwordRegister.value === "")
     {
         passwordRegister.style.borderColor = "#8A666A";
-        passwordRegister.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: F8F8F2;'>Поле не заполнено</p>");
+        passwordRegister.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: black;'>Поле не заполнено</p>");
         isValid = false;
     }
 
@@ -88,7 +88,7 @@ function validateFormForRegister()
     {
         passwordRegister.style.borderColor = "#8A666A";
         repeatPasswordRegister.style.borderColor = "#8A666A";
-        repeatPasswordRegister.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: F8F8F2;'>Пароли не совпадают</p>");
+        repeatPasswordRegister.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: black;'>Пароли не совпадают</p>");
         isValid = false;
     }
 
@@ -111,12 +111,12 @@ buttonFormRegister.onclick = function(event)
                 {
                     formEnter.removeAttribute("style");
                     formRegister.setAttribute("style","display:none;");
-                    document.getElementById("form-form-enter").insertAdjacentHTML("beforebegin", "<p class='error-message' style='margin: 0 0 10px 0; color: F8F8F2;'>Пользователь успешно зарегистрирован</p>");
+                    document.getElementById("form-form-enter").insertAdjacentHTML("beforebegin", "<p class='error-message' style='margin: 0 0 10px 0; color: black;'>Пользователь успешно зарегистрирован</p>");
                 }
                 else if(data.answer == "Такой пользователь уже существует")
                 {
                     emailRegister.style.borderColor = "#8A666A";
-                    document.getElementById("form-form-register").insertAdjacentHTML("beforebegin", "<p class='error-message' style='margin: 0 0 10px 0; color: F8F8F2;'>Такой пользователь уже существует</p>");
+                    document.getElementById("form-form-register").insertAdjacentHTML("beforebegin", "<p class='error-message' style='margin: 0 0 10px 0; color: black;'>Такой пользователь уже существует</p>");
                 }
                 else
                 {
@@ -148,14 +148,14 @@ function validateFormForEnter()
     if (emailInput.value === "")
     {
         emailInput.style.borderColor = "#8A666A";
-        emailInput.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: F8F8F2;'>Поле не заполнено</p>");
+        emailInput.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: black;'>Поле не заполнено</p>");
         isValid = false;
     }
 
     if (passwordInput.value === "")
     {
         passwordInput.style.borderColor = "#8A666A";
-        passwordInput.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: F8F8F2;'>Поле не заполнено</p>");
+        passwordInput.insertAdjacentHTML("afterend", "<p class='error-message' style='margin: 0; color: black;'>Поле не заполнено</p>");
         isValid = false;
     }
     return isValid;
@@ -187,13 +187,13 @@ buttonFormEnter.onclick = function(event)
                 else if(data.answer == "Не правильный пароль")
                 {
                     passwordInput.style.borderColor = "#8A666A";
-                    document.getElementById("form-form-enter").insertAdjacentHTML("beforebegin", "<p class='error-message' style='margin: 0 0 10px 0; color: F8F8F2;'>Не правильный пароль</p>");
+                    document.getElementById("form-form-enter").insertAdjacentHTML("beforebegin", "<p class='error-message' style='margin: 0 0 10px 0; color: black;'>Не правильный пароль</p>");
                 }
                 else if(data.answer == "Не правильный логин и пароль")
                 {
                     emailInput.style.borderColor = "#8A666A";
                     passwordInput.style.borderColor = "#8A666A";
-                    document.getElementById("form-form-enter").insertAdjacentHTML("beforebegin", "<p class='error-message' style='margin: 0 0 10px 0; color: F8F8F2;'>Не правильный логин и пароль</p>");
+                    document.getElementById("form-form-enter").insertAdjacentHTML("beforebegin", "<p class='error-message' style='margin: 0 0 10px 0; color: black;'>Не правильный логин и пароль</p>");
                 }
                 else
                 {
