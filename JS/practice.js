@@ -83,7 +83,6 @@ function createPassingTheTest(testId, subject, jsonDataQuestion) {
             counterCorrectAnswer++;
           }
       }
-      console.log(testId);
       let xhr = new XMLHttpRequest(); // Создаем новый объект XMLHTTPrequest
       xhr.open("POST", "../PHP/userTestAdd.php", true); 
       // Отправляем запрос на сервер
@@ -158,6 +157,7 @@ function getLaboratoryWork(){
     xhr.open("POST", "../PHP/laboratoryWork.php"); // Открываем соединение с сервером с помощью метода "POST" и адреса ""
     xhr.send(); // Отправляем запрос на сервер
 }
+//--------------------------------------------------
 // Функция для отображения тестов
 function getTest(){
     let containerForTests = document.getElementById("containerForTests");
