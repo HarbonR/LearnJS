@@ -14,7 +14,7 @@
         
         $userEmail  = mysqli_real_escape_string($Connect, $userEmail); // Экранирование специальных символов в строке для использования в SQL-запросе
         $userPassword  = mysqli_real_escape_string($Connect, $userPassword); // То же самое для пароля
-        $sql = 'SELECT Id, Name, Email, Password FROM User'; // SQL-запрос на выборку имени, е-мейла и пароля из таблицы пользователей
+        $sql = 'SELECT Id, Name, Email, Teacher, Password FROM User'; // SQL-запрос на выборку имени, е-мейла и пароля из таблицы пользователей
         $result = mysqli_query($Connect, $sql); // Выполнение SQL-запроса
         if ($result) // Проверка на успешность выполнения запроса
         {
@@ -30,6 +30,7 @@
                         $booleanUserPassword = true; // Пароль верифицирован
                         $_SESSION['userId'] = $row['Id']; // Сохраняем id пользователя в сессии
                         $_SESSION['userName'] = $row['Name']; // Сохраняем имя в сессии
+                        $_SESSION['teacher'] = $row['Teacher']; // Сохраняем учитель ли пользователь в сессии
                     }
                 }
             }
@@ -38,7 +39,7 @@
                 if($booleanUserPassword) // Если пароль верный
                 {
                     $_SESSION['userEmail'] = $userEmail; // Сохраняем е-мейл пользователя в сессии
-                    $data = ['answer' => 'Правильный логин и пароль', 'userName' => $_SESSION['userName']];
+                    $data = ['answer' => 'Правильный логин и пароль', 'userName' => $_SESSION['userName'], 'userId' => $_SESSION['userId'], 'teacher' => $_SESSION['teacher']];
                     $jsonData = json_encode($data); // Преобразуем массив в формат JSON
                     echo $jsonData; // Отправляем JSON-данные в JavaScript
                 }

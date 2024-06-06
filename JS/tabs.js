@@ -112,7 +112,10 @@ personalArea.onclick = function(){
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
         body.innerHTML = this.responseText;
-        userPersonalAccount();
+        if(!sessionStorage.getItem("teacher"))
+            userPersonalAccount();
+        else
+            teacherPersonalAccount();
     };
     xhr.open('GET', '../Pages/personalArea.php');
     xhr.send();

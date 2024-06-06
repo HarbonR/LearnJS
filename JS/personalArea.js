@@ -2,6 +2,7 @@
 // Переменные
 
 //====================================================================================================
+/* -------------------------------------Личный кабинет пользователя----------------------------------- */
 // Функция для формирования личного кабинета
 function userPersonalAccount()
 {
@@ -87,5 +88,34 @@ function getLaboratoryWorkForPersonalAccount(){
     };
     xhr.open("POST", "../PHP/laboratoryWork.php"); // Открываем соединение с сервером с помощью метода "POST" и адреса ""
     xhr.send(); // Отправляем запрос на сервер
+}
+//====================================================================================================
+/* -------------------------------------Личный кабинет преподавателя---------------------------------- */
+// Функция для формирования личного кабинета
+function teacherPersonalAccount()
+{
+    let personalAccount = document.getElementById("personalAccount");
+    let сourseProgress = document.createElement("div");
+    // сourseProgress.textContent = "Курс пройден на " + "";
+
+    let xhr = new XMLHttpRequest(); // Создаем новый объект XMLHttpRequest
+    xhr.onreadystatechange = function() // Устанавливаем функцию, которая будет вызываться при изменении состояния объекта `xhr`
+    {
+        if (xhr.readyState === 4 && xhr.status === 200) // Проверяем, что запрос завершен и успешен
+        {
+            let jsonData = JSON.parse(xhr.responseText); // Разбираем JSON-данные
+            for(let i = 0; i < jsonData.length; i++)
+            {
+                let scoreForTheTestOnTheTopic = document.createElement("div"); // Оценка за тест по теме
+                scoreForTheTestOnTheTopic.textContent = "Оценка за тест по теме: " + jsonData[i].subject + " " + jsonData[i].testScore + "%";
+                personalAccount.appendChild(scoreForTheTestOnTheTopic);
+            }
+            getLaboratoryWorkForPersonalAccount();
+        }
+    };
+    xhr.open("POST", "../PHP/userTest.php"); // Открываем соединение с сервером с помощью метода "POST" и адреса ""
+    xhr.send(); // Отправляем запрос на сервер
+    
+    // personalAccount.appendChild(сourseProgress);
 }
 //====================================================================================================

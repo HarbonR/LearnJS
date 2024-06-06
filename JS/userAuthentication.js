@@ -181,8 +181,10 @@ buttonFormEnter.onclick = function(event)
                     enterRegister.setAttribute("style","display:none;");
                     exit.removeAttribute("style");
                     personalArea.style.display = "block";
-                    user.textContent = data.userName;
+                    practice.style.display = "block";
+                    user.textContent = "Id: " + data.userId + " Name: " + data.userName;
                     logoEnterRegister.style.display = "none";
+                    sessionStorage.setItem("teacher", data.teacher); // Добавляем в хранилище преподавать пользователь или нет
                 }
                 else if(data.answer == "Не правильный пароль")
                 {
@@ -222,8 +224,10 @@ xhrData.onreadystatechange = function() // Устанавливаем функц
             exit.removeAttribute("style");
             user.removeAttribute("style");
             personalArea.style.display = "block";
+            practice.style.display = "block";
             logoEnterRegister.style.display = "none";
-            user.textContent = userData.userName;
+            user.textContent = "Id: " + userData.userId + " Name: " + userData.userName;
+            sessionStorage.setItem("teacher", userData.teacher); // Добавляем в хранилище преподавать пользователь или нет
         }
     }
 };
@@ -239,6 +243,7 @@ exit.onclick = function()
     exit.style.display = "none";
     logoEnterRegister.removeAttribute("style");
     personalArea.style.display = "none";
+    practice.style.display = "none";
     logo.click();
 }
 //==================================================
