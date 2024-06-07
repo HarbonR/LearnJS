@@ -244,6 +244,7 @@ exit.onclick = function()
     logoEnterRegister.removeAttribute("style");
     personalArea.style.display = "none";
     practice.style.display = "none";
+    sessionStorage.removeItem("teacher"); // Удаляем элемент
     logo.click();
 }
 //==================================================

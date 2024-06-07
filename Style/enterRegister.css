@@ -39,8 +39,10 @@
 }
 #button-form-enter{
     background-color: #6CA300;
+    margin-top: 20px;
 }
 #create-account{
+    margin-top: 20px;
     background-color: #BCAA00;
 }
 /* ==================================================================================================== */
@@ -59,6 +61,7 @@
     flex-direction: column;
 }
 #button-form-register{
+    margin-top: 20px;
     background-color: #6CA300;
 }
 /* ==================================================================================================== */
