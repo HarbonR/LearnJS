@@ -42,21 +42,35 @@ function createTest(jsonDataTest, jsonDataQuestion){
 
     let elementSubject = document.createTextNode(jsonDataTest.subject);
 
+    test.appendChild(elementSubject);
+
     let buttonTakeTheTest = document.createElement("button");
     buttonTakeTheTest.className = "buttonTakeTheTest";
     buttonTakeTheTest.textContent = "Пройти тест";
     buttonTakeTheTest.onclick = function(){
-        createPassingTheTest(jsonDataTest.id, jsonDataTest.subject, jsonDataQuestion);
+        // Создаем новый JSON
+        let newJsonDataQuestion = [];
+        for(let i = 0; i < jsonDataQuestion.length; i++) // Заполняем его только теми вопросами, которые относятся к данному тесту
+        {
+            if(jsonDataTest.id == jsonDataQuestion[i].idTest)
+            {
+                newJsonDataQuestion.push(jsonDataQuestion[i]);
+            }
+        }
+        createPassingTheTest(jsonDataTest.id, jsonDataTest.subject, newJsonDataQuestion);
     }
-
-    test.appendChild(elementSubject);
+    
     test.appendChild(buttonTakeTheTest);
+
+    if(jsonDataTest.testScore != null)
+        buttonTakeTheTest.disabled = true;
 
     return test;
 }
 //--------------------------------------------------
 // Функция для создания прохождения тестов
-function createPassingTheTest(testId, subject, jsonDataQuestion) {
+function createPassingTheTest(testId, subject, jsonDataQuestion)
+{
     let body = document.getElementById('body');
     body.innerHTML = ""; // Очищаем контейнер перед добавлением новых карточек
   
@@ -78,13 +92,20 @@ function createPassingTheTest(testId, subject, jsonDataQuestion) {
 
       for(let i = 0; i < jsonDataQuestion.length; i++)
       {
-          if(jsonDataQuestion[i].correctAnswer == checkedLabels[i].textContent)
-          {
+        if(jsonDataQuestion[i].correctAnswer == checkedLabels[i].textContent)
+        {
             counterCorrectAnswer++;
-          }
+        }
       }
       let xhr = new XMLHttpRequest(); // Создаем новый объект XMLHTTPrequest
-      xhr.open("POST", "../PHP/userTestAdd.php", true); 
+      xhr.onreadystatechange = function() // Устанавливаем функцию, которая будет вызываться при изменении состояния объекта xhr
+      {
+        if (xhr.readyState === 4 && xhr.status === 200) // Проверяем, что запрос завершен и успешен
+        {
+            practice.click();
+        }
+      }
+      xhr.open("POST", "../PHP/userTestAdd.php", true);
       // Отправляем запрос на сервер
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // Устанавливаем заголовок Content-Type
       xhr.send("testId=" + encodeURIComponent(testId) + "&testScore=" + encodeURIComponent(counterCorrectAnswer * 100 / countQuestions));
@@ -129,6 +150,7 @@ function createPassingTheTest(testId, subject, jsonDataQuestion) {
     let submitButton = document.createElement('button');
     submitButton.type = 'submit';
     submitButton.textContent = 'Отправить';
+
     fieldset.appendChild(submitButton);
   
     form.appendChild(fieldset);

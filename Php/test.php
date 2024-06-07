@@ -8,13 +8,16 @@
     {
         die("Ошибка подключения: " . mysqli_connect_error());
     }
+    $userId = $_SESSION['userId'];
     // Запрос к первой таблице
     $sql1 = "
         SELECT
-            Id
-            ,Subject
+            Test.Id
+            ,Test.Subject
+            ,UserTest.TestScore
         FROM
             Test
+        LEFT JOIN UserTest ON UserTest.TestId = Test.id AND UserTest.UserId = '$userId'
         "; 
     $result1 = mysqli_query($Connect, $sql1); 
     $data1 = array(); 
@@ -24,7 +27,8 @@
         {
             $data1[] = array(
                 'id' => $row1['Id'],
-                'subject' => $row1['Subject']
+                'subject' => $row1['Subject'],
+                'testScore' => $row1['TestScore'],
             );
         }
     }

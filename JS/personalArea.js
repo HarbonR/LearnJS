@@ -7,8 +7,6 @@
 function userPersonalAccount()
 {
     let personalAccount = document.getElementById("personalAccount");
-    let сourseProgress = document.createElement("div");
-    // сourseProgress.textContent = "Курс пройден на " + "";
 
     let xhr = new XMLHttpRequest(); // Создаем новый объект XMLHttpRequest
     xhr.onreadystatechange = function() // Устанавливаем функцию, которая будет вызываться при изменении состояния объекта `xhr`
@@ -19,7 +17,7 @@ function userPersonalAccount()
             for(let i = 0; i < jsonData.length; i++)
             {
                 let scoreForTheTestOnTheTopic = document.createElement("div"); // Оценка за тест по теме
-                scoreForTheTestOnTheTopic.textContent = "Оценка за тест по теме: " + jsonData[i].subject + " " + jsonData[i].testScore + "%";
+                scoreForTheTestOnTheTopic.textContent = "Оценка за тест по теме: " + jsonData[i].subject + " : " + jsonData[i].testScore;
                 personalAccount.appendChild(scoreForTheTestOnTheTopic);
             }
             getLaboratoryWorkForPersonalAccount();
@@ -27,15 +25,13 @@ function userPersonalAccount()
     };
     xhr.open("POST", "../PHP/userTest.php"); // Открываем соединение с сервером с помощью метода "POST" и адреса ""
     xhr.send(); // Отправляем запрос на сервер
-    
-    // personalAccount.appendChild(сourseProgress);
 }
 //--------------------------------------------------
 // Функция для создания лабораторных работ
-function createLaboratoryWorkForPersonalAccount(id, subject, fileLink){
+function createLaboratoryWorkForPersonalAccount(id, subject, labGrade){
     let laboratoryWork = document.createElement("div");
 
-    let elementSubject = document.createTextNode(subject);
+    let elementSubject = document.createTextNode("Оценка за " + subject + " " + ((labGrade != null) ? ": " + labGrade : ":")); // Исправить
 
     let inputDownloadLaboratoryWork = document.createElement("input");
     inputDownloadLaboratoryWork.className = "inputDownloadLaboratoryWork";
@@ -56,7 +52,7 @@ function createLaboratoryWorkForPersonalAccount(id, subject, fileLink){
         {
             if (xhr.readyState === 4 && xhr.status === 200) // Проверяем, что запрос завершен и успешен
             {
-
+                personalAccount.click();
             }
         }
         xhr.open('POST', '../PHP/addLaboratoryWork.php', true); // Настройка запроса
@@ -82,7 +78,7 @@ function getLaboratoryWorkForPersonalAccount(){
             let jsonData = JSON.parse(xhr.responseText); // Разбираем JSON-данные
             for(let i = 0; i < jsonData.length; i++)
             {
-                let laboratoryWork = createLaboratoryWorkForPersonalAccount(jsonData[i].id, jsonData[i].subject, jsonData[i].fileLink);
+                let laboratoryWork = createLaboratoryWorkForPersonalAccount(jsonData[i].id, jsonData[i].subject, jsonData[i].labGrade);
                 containerForLaboratoryWorks.appendChild(laboratoryWork);
             }
         }
@@ -96,12 +92,35 @@ function getLaboratoryWorkForPersonalAccount(){
 function userPersonalAccountTestForTeacher(jsonData)
 {
     let personalAccount = document.createElement("div");
+    personalAccount.style.display = 'flex';
+    personalAccount.style.alignItems = 'center';
 
     let scoreForTheTestOnTheTopic = document.createElement("div"); // Оценка за тест по теме
-    scoreForTheTestOnTheTopic.textContent = "Оценка за тест по теме: " + jsonData.subject + " " + jsonData.testScore + "%";
+    scoreForTheTestOnTheTopic.textContent = "Оценка за тест по теме: " + jsonData.subject + " " + jsonData.testScore;
 
     personalAccount.appendChild(scoreForTheTestOnTheTopic);
+
+    let deleteTest = document.createElement("button");
+    deleteTest.className = "buttonTakeTheTest";
+    deleteTest.textContent = "Удалить тест";
+    deleteTest.onclick = function()
+    {
+        let xhr = new XMLHttpRequest(); // Создаем новый объект XMLHttpRequest
+        xhr.onreadystatechange = function() // Устанавливаем функцию, которая будет вызываться при изменении состояния объекта `xhr`
+        {
+            if (xhr.readyState === 4 && xhr.status === 200) // Проверяем, что запрос завершен и успешен
+            {
+                personalAccount.remove();
+            }
+        };
+        xhr.open("POST", "../PHP/deleteUserTest.php", true); 
+        // Отправляем запрос на сервер
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // Устанавливаем заголовок Content-Type
+        xhr.send("userId=" + encodeURIComponent(jsonData.userId) + "&testId=" + encodeURIComponent(jsonData.testId));
+    }
     
+    personalAccount.appendChild(deleteTest);
+
     return personalAccount;
 }
 //--------------------------------------------------

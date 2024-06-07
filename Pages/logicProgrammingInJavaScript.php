@@ -1,5 +1,5 @@
 <div style="font-size: 26px;">
-  <img src="/Picture/logicProgrammingInJavaScript.png" alt="" style="width: 100%;">
+  <img src="/Picture/logicProgrammingInJavaScript.png" alt="" style="width: 60%;">
   <br>
   <br>JavaScript - это универсальный язык программирования,
   <br>который позволяет разработчикам создавать

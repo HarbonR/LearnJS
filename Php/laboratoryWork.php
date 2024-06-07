@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require 'linkDB.php';
     // Создаем подключение
     $Connect = mysqli_connect($serverName, $userName, $password, $dBName);
@@ -10,11 +11,14 @@
     $userId = $_SESSION['userId'];
     $sql = "
         SELECT
-            Id 
-            ,Subject
-            ,FileLink
+            LaboratoryWork.Id 
+            ,LaboratoryWork.Subject
+            ,LaboratoryWork.FileLink
+            ,UserLabWork.LabGrade
         FROM
-            LaboratoryWork"; // SQL запрос
+            LaboratoryWork
+        LEFT JOIN UserLabWork ON UserLabWork.LabId = LaboratoryWork.Id AND UserLabWork.UserId = '$userId'
+            "; // SQL запрос
     $result = mysqli_query($Connect, $sql); // выполнение запроса
     $data = array(); // Создаем пустой массив для хранения данных
 
@@ -25,7 +29,8 @@
             $data[] = array(
                 'id' => $row['Id'],
                 'subject' => $row['Subject'],
-                'fileLink' => $row['FileLink']
+                'fileLink' => $row['FileLink'],
+                'labGrade' => $row['LabGrade']
             );
         }
     }

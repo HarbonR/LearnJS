@@ -14,6 +14,7 @@
         SELECT
             User.Id
             ,Name
+            ,UserTest.TestId
             ,Test.Subject
             ,UserTest.TestScore
         FROM
@@ -34,6 +35,7 @@
             $data1[] = array(
                 'userId' => $row1['Id'],
                 'name' => $row1['Name'],
+                'testId' => $row1['TestId'],
                 'subject' => $row1['Subject'],
                 'testScore' => $row1['TestScore']
             );
