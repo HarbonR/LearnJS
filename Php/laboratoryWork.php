@@ -14,6 +14,7 @@
             LaboratoryWork.Id 
             ,LaboratoryWork.Subject
             ,LaboratoryWork.FileLink
+            ,UserLabWork.UserId
             ,UserLabWork.LabGrade
         FROM
             LaboratoryWork
@@ -30,6 +31,7 @@
                 'id' => $row['Id'],
                 'subject' => $row['Subject'],
                 'fileLink' => $row['FileLink'],
+                'userId' => $row['UserId'],
                 'labGrade' => $row['LabGrade']
             );
         }

@@ -19,9 +19,35 @@
             {
                 die("Ошибка подключения: " . mysqli_connect_error());
             }
-            $path = '/Users/'.$userId.'/'.$subject.'.'.$extension; // Создаём путь до лабораторной работы
-            $sql = "INSERT INTO UserLabWork (UserId, LabId, FileLink) VALUES ('$userId', '$labId', '$path')"; // SQL запрос
-            $result = mysqli_query($Connect, $sql); // выполнение запроса
+
+            $sql1 = "
+                SELECT
+                    *
+                FROM
+                    UserLabWork
+                WHERE
+                    UserId = '$userId' AND LabId = '$labId'
+            "; // SQL запрос
+            $result1 = mysqli_query($Connect, $sql1); // выполнение запроса
+
+            if (mysqli_num_rows($result1) > 0) // Запись существует, 
+            {
+                $sql2 = "
+                    UPDATE UserLabWork 
+                    SET 
+                        LabGrade = NULL
+                    WHERE
+                        UserId = '$userId' AND LabId = '$labId'
+                "; // SQL запрос
+                $result2 = mysqli_query($Connect, $sql2); // выполнение запроса
+            }
+            else
+            {
+                $path = '/Users/'.$userId.'/'.$subject.'.'.$extension; // Создаём путь до лабораторной работы
+                $sql2 = "INSERT INTO UserLabWork (UserId, LabId, FileLink) VALUES ('$userId', '$labId', '$path')"; // SQL запрос
+                $result2 = mysqli_query($Connect, $sql2); // выполнение запроса
+            }
+
             mysqli_close($Connect); // Закрываем соединение с базой данных
         }
     }

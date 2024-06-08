@@ -39,7 +39,7 @@ function userPersonalAccount()
 }
 //--------------------------------------------------
 // Функция для создания лабораторных работ
-function createLaboratoryWorkForPersonalAccount(id, subject, labGrade){
+function createLaboratoryWorkForPersonalAccount(id, subject, userId, labGrade){
     let laboratoryWork = document.createElement("div");
 
     laboratoryWork.textContent = "Оценка за " + subject + " " + ((labGrade != null) ? ": " : ":");
@@ -53,6 +53,11 @@ function createLaboratoryWorkForPersonalAccount(id, subject, labGrade){
     grade.textContent = labGrade;
     if(labGrade != null)
         laboratoryWork.appendChild(grade);
+    else if(labGrade == null && userId != null)
+    {
+        grade.textContent = "Загружена";
+        laboratoryWork.appendChild(grade);
+    }
 
     let inputDownloadLaboratoryWork = document.createElement("input");
     inputDownloadLaboratoryWork.className = "inputDownloadLaboratoryWork";
@@ -98,7 +103,7 @@ function getLaboratoryWorkForPersonalAccount(){
             let jsonData = JSON.parse(xhr.responseText); // Разбираем JSON-данные
             for(let i = 0; i < jsonData.length; i++)
             {
-                let laboratoryWork = createLaboratoryWorkForPersonalAccount(jsonData[i].id, jsonData[i].subject, jsonData[i].labGrade);
+                let laboratoryWork = createLaboratoryWorkForPersonalAccount(jsonData[i].id, jsonData[i].subject, jsonData[i].userId, jsonData[i].labGrade);
                 containerForLaboratoryWorks.appendChild(laboratoryWork);
             }
         }
