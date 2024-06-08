@@ -73,7 +73,7 @@ function createLaboratoryWorkForPersonalAccount(id, subject, labGrade){
         {
             if (xhr.readyState === 4 && xhr.status === 200) // Проверяем, что запрос завершен и успешен
             {
-                personalAccount.click();
+                personalArea.click();
             }
         }
         xhr.open('POST', '../PHP/addLaboratoryWork.php', true); // Настройка запроса
@@ -212,7 +212,7 @@ function userPersonalAccountLaboratoryWorkForTeacher(jsonData)
         {
             if (xhr.readyState === 4 && xhr.status === 200) // Проверяем, что запрос завершен и успешен
             {
-                
+                personalArea.click();
             }
         };
         xhr.open("POST", "../PHP/labGradeChanges.php", true); 
@@ -239,6 +239,7 @@ function teacherPersonalAccount()
 
     let inputAddStudent = document.createElement("input");
     inputAddStudent.style.textAlign = "center";
+    inputAddStudent.placeholder = "Введите Id ученика для отслеживания";
     
     let buttonAddStudent = document.createElement("button");
     buttonAddStudent.className = "buttonDownloadLaboratoryWork";

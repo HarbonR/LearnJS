@@ -48,7 +48,7 @@ function createTest(jsonDataTest, jsonDataQuestion){
     buttonTakeTheTest.className = "buttonTakeTheTest";
     buttonTakeTheTest.textContent = "Пройти тест";
     buttonTakeTheTest.onclick = function(){
-        // Создаем новый JSON
+        // Создаем новый JSON c вопросами
         let newJsonDataQuestion = [];
         for(let i = 0; i < jsonDataQuestion.length; i++) // Заполняем его только теми вопросами, которые относятся к данному тесту
         {
@@ -108,7 +108,8 @@ function createPassingTheTest(testId, subject, jsonDataQuestion)
       xhr.open("POST", "../PHP/userTestAdd.php", true);
       // Отправляем запрос на сервер
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // Устанавливаем заголовок Content-Type
-      xhr.send("testId=" + encodeURIComponent(testId) + "&testScore=" + encodeURIComponent(counterCorrectAnswer * 100 / countQuestions));
+      let testScore = Math.max(2, Math.round((counterCorrectAnswer / countQuestions) * 5)); // Высчитываем оценку за тест по 5 бальной шкале с минимальной оценкой 2
+      xhr.send("testId=" + encodeURIComponent(testId) + "&testScore=" + encodeURIComponent(testScore));
     });
   
     let fieldset = document.createElement('fieldset');
@@ -125,6 +126,7 @@ function createPassingTheTest(testId, subject, jsonDataQuestion)
         questionData.incorrectAnswerTwo,
         questionData.incorrectAnswerThree
       ];
+      answers.sort(() => Math.random() - 0.5); // Перемешиваем ответы в вопросе
   
       let questionElement = document.createElement('div');
       questionElement.id = jsonDataQuestion[i].idQuestion;
