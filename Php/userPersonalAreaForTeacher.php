@@ -8,7 +8,7 @@
     {
         die("Ошибка подключения: " . mysqli_connect_error());
     }
-    $userId = $_SESSION['userId'];
+    $userId = $_SESSION['userId']; // Id преподавателя, учителя
     // Запрос к первой таблице
     $sql1 = "
         SELECT
@@ -46,11 +46,13 @@
         SELECT
             UserLabWork.LabId
             ,TeacherUser.UserId
+            ,User.Name
             ,LaboratoryWork.Subject
             ,UserLabWork.LabGrade
             ,UserLabWork.FileLink
         FROM
             TeacherUser
+        INNER JOIN User ON User.Id = TeacherUser.UserId
         INNER JOIN UserLabWork ON UserLabWork.UserId = TeacherUser.UserId
         INNER JOIN LaboratoryWork ON LaboratoryWork.Id = UserLabWork.LabId
         WHERE
@@ -64,16 +66,40 @@
             $data2[] = array(
                 'labId' => $row2['LabId'],
                 'userId' => $row2['UserId'],
+                'name' => $row2['Name'],
                 'subject' => $row2['Subject'],
                 'labGrade' => $row2['LabGrade'],
                 'fileLink' => $row2['FileLink']
             );
         }
     }
-    // Объединяем данные из двух таблиц в один массив
+    // Запрос ко третей таблице
+    $sql3 = "
+        SELECT
+            UserId
+            ,User.Name
+        FROM
+            TeacherUser
+        INNER JOIN User ON User.Id = TeacherUser.UserId
+        WHERE
+            TeacherUser.TeacherId = '$userId'"; // SQL запрос
+    $result3 = mysqli_query($Connect, $sql3); 
+    $data3 = array(); 
+    if (mysqli_num_rows($result2) > 0) 
+    {
+        while($row3 = mysqli_fetch_assoc($result3)) 
+        {
+            $data3[] = array(
+                'userId' => $row3['UserId'],
+                'name' => $row3['Name']
+            );
+        }
+    }
+    // Объединяем данные из трех таблиц в один массив
     $data = array(
         'test' => $data1,
-        'laboratoryWork' => $data2
+        'laboratoryWork' => $data2,
+        'user' => $data3
     );
     $jsonData = json_encode($data); // Преобразуем массив в формат JSON
     echo $jsonData; // Отправляем JSON-данные в JavaScript

@@ -31,7 +31,7 @@ function userPersonalAccount()
 function createLaboratoryWorkForPersonalAccount(id, subject, labGrade){
     let laboratoryWork = document.createElement("div");
 
-    let elementSubject = document.createTextNode("Оценка за " + subject + " " + ((labGrade != null) ? ": " + labGrade : ":")); // Исправить
+    let elementSubject = document.createTextNode("Оценка за " + subject + " " + ((labGrade != null) ? ": " + labGrade : ":"));
 
     let inputDownloadLaboratoryWork = document.createElement("input");
     inputDownloadLaboratoryWork.className = "inputDownloadLaboratoryWork";
@@ -231,24 +231,14 @@ function teacherPersonalAccount()
             let jsonData = JSON.parse(xhr.responseText); // Разбираем JSON-данные       
             jsonDataTest = jsonData.test;
             jsonDataLaboratoryWork = jsonData.laboratoryWork;
+            jsonDataUser = jsonData.user;
             //--------------------------------------------------
-            if(jsonDataTest.length != 0) // Если данные есть добавить первого ученика (Имя). Добавляем div с id учеников
+            for(let i = 0; i < jsonDataUser.length; i++) // Если данных больше чем один добавить остальных учеников (Имена)
             {
                 let nameStudent = document.createElement("div");
-                nameStudent.textContent = "Ученик: " + jsonDataTest[0].name;
-                nameStudent.id = jsonDataTest[0].userId;
+                nameStudent.textContent = "Ученик: " + jsonDataUser[i].name;
+                nameStudent.id = jsonDataUser[i].userId;
                 personalAccount.appendChild(nameStudent);
-            }
-            //--------------------------------------------------
-            for(let i = 1; i < jsonDataTest.length; i++) // Если данных больше чем один добавить остальных учеников (Имена)
-            {
-                if(jsonDataTest[i - 1].userId != jsonDataTest[i].userId)
-                {
-                    let nameStudent = document.createElement("div");
-                    nameStudent.textContent = "Ученик: " + jsonDataTest[i].name;
-                    nameStudent.id = jsonDataTest[i].userId;
-                    personalAccount.appendChild(nameStudent);
-                }
             }
             //--------------------------------------------------
             for(let i = 0; i < jsonDataTest.length; i++) // Заполнить данные (Тесты) об учениках созданных ранее (Имена)
