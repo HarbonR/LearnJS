@@ -7,3 +7,6 @@
 <div id="containerForLaboratoryWorks" class="container">
     
 </div>
+<div id="personalAccountStudent">
+
+</div>

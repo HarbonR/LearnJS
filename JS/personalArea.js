@@ -17,7 +17,18 @@ function userPersonalAccount()
             for(let i = 0; i < jsonData.length; i++)
             {
                 let scoreForTheTestOnTheTopic = document.createElement("div"); // Оценка за тест по теме
-                scoreForTheTestOnTheTopic.textContent = "Оценка за тест по теме: " + jsonData[i].subject + " : " + jsonData[i].testScore;
+                scoreForTheTestOnTheTopic.style.marginBottom = "5px";
+                scoreForTheTestOnTheTopic.textContent = "Оценка за тест по теме: " + jsonData[i].subject + " : ";
+
+                let grade = document.createElement("span"); // Оценка
+                grade.style.marginLeft = "5px";
+                grade.style.border = "1px solid red";
+                grade.style.borderRadius = "50%";
+                grade.style.color = "red";
+                grade.style.padding = "5px";
+                grade.textContent = jsonData[i].testScore;
+                scoreForTheTestOnTheTopic.appendChild(grade);
+
                 personalAccount.appendChild(scoreForTheTestOnTheTopic);
             }
             getLaboratoryWorkForPersonalAccount();
@@ -31,7 +42,17 @@ function userPersonalAccount()
 function createLaboratoryWorkForPersonalAccount(id, subject, labGrade){
     let laboratoryWork = document.createElement("div");
 
-    let elementSubject = document.createTextNode("Оценка за " + subject + " " + ((labGrade != null) ? ": " + labGrade : ":"));
+    laboratoryWork.textContent = "Оценка за " + subject + " " + ((labGrade != null) ? ": " : ":");
+
+    let grade = document.createElement("span"); // Оценка
+    grade.style.marginLeft = "5px";
+    grade.style.border = "1px solid red";
+    grade.style.borderRadius = "50%";
+    grade.style.color = "red";
+    grade.style.padding = "5px";
+    grade.textContent = labGrade;
+    if(labGrade != null)
+        laboratoryWork.appendChild(grade);
 
     let inputDownloadLaboratoryWork = document.createElement("input");
     inputDownloadLaboratoryWork.className = "inputDownloadLaboratoryWork";
@@ -59,7 +80,6 @@ function createLaboratoryWorkForPersonalAccount(id, subject, labGrade){
         xhr.send(formData); // Отправка запроса
     }
 
-    laboratoryWork.appendChild(elementSubject);
     laboratoryWork.appendChild(inputDownloadLaboratoryWork);
     laboratoryWork.appendChild(buttonDownloadLaboratoryWork);
 
@@ -94,9 +114,19 @@ function userPersonalAccountTestForTeacher(jsonData)
     let personalAccount = document.createElement("div");
     personalAccount.style.display = 'flex';
     personalAccount.style.alignItems = 'center';
+    personalAccount.style.marginTop = '5px';
 
     let scoreForTheTestOnTheTopic = document.createElement("div"); // Оценка за тест по теме
-    scoreForTheTestOnTheTopic.textContent = "Оценка за тест по теме: " + jsonData.subject + " " + jsonData.testScore;
+    scoreForTheTestOnTheTopic.textContent = "Оценка за тест по теме: " + jsonData.subject + " ";
+
+    let grade = document.createElement("span"); // Оценка
+    grade.style.marginLeft = "5px";
+    grade.style.border = "1px solid red";
+    grade.style.borderRadius = "50%";
+    grade.style.color = "red";
+    grade.style.padding = "5px";
+    grade.textContent = jsonData.testScore;
+    scoreForTheTestOnTheTopic.appendChild(grade);
 
     personalAccount.appendChild(scoreForTheTestOnTheTopic);
 
@@ -128,11 +158,22 @@ function userPersonalAccountTestForTeacher(jsonData)
 function userPersonalAccountLaboratoryWorkForTeacher(jsonData)
 {
     let personalAccount = document.createElement("div");
+    personalAccount.style.marginTop = '5px';
 
     let labGrade = document.createElement("div"); // Оценка за лабораторные работы
-    labGrade.textContent = "Оценка за " + jsonData.subject + " " + ((jsonData.labGrade != null) ? ": " + jsonData.labGrade : ":");
+    labGrade.textContent = "Оценка за " + jsonData.subject + " " + ((jsonData.labGrade != null) ? ": " : ":");
     labGrade.style.display = 'flex';
     labGrade.style.alignItems = 'center';
+
+    let grade = document.createElement("span"); // Оценка
+    grade.style.marginLeft = "5px";
+    grade.style.border = "1px solid red";
+    grade.style.borderRadius = "50%";
+    grade.style.color = "red";
+    grade.style.padding = "5px";
+    grade.textContent = jsonData.labGrade;
+    if(jsonData.labGrade != null)
+        labGrade.appendChild(grade);
 
     let buttonDownloadLaboratoryWork = document.createElement("button"); // Кнопка для загрузки лабораторной работы ученика
     buttonDownloadLaboratoryWork.className = "buttonDownloadLaboratoryWork";
@@ -156,7 +197,8 @@ function userPersonalAccountLaboratoryWorkForTeacher(jsonData)
 
     let inputСhangeRating = document.createElement("input");
     inputСhangeRating.style.marginLeft = "10px";
-    inputСhangeRating.style.width = "30px";
+    inputСhangeRating.style.width = "100px";
+    inputСhangeRating.placeholder = "Оценка";
 
     labGrade.appendChild(inputСhangeRating);
 
@@ -191,11 +233,12 @@ function teacherPersonalAccount()
 {
     let title = body.getElementsByClassName("title");
     title[0].textContent = "Личный кабинет преподавателя";
-    let personalAccount = document.getElementById("personalAccount");
+    let personalAccount = document.getElementById("personalAccountStudent");
 
     let form = document.createElement("form");
 
     let inputAddStudent = document.createElement("input");
+    inputAddStudent.style.textAlign = "center";
     
     let buttonAddStudent = document.createElement("button");
     buttonAddStudent.className = "buttonDownloadLaboratoryWork";
@@ -209,8 +252,19 @@ function teacherPersonalAccount()
         {
             if (xhr.readyState === 4 && xhr.status === 200) // Проверяем, что запрос завершен и успешен
             {
-                
-            }
+                if(xhr.responseText == "")
+                    personalArea.click();
+                else if(xhr.responseText == "Пользователя не существует")
+                {
+                    inputAddStudent.value = "";
+                    inputAddStudent.placeholder = "Такого пользователя не существует";
+                }
+                else if(xhr.responseText == "Пользователь уже добавлен")
+                {
+                    inputAddStudent.value = "";
+                    inputAddStudent.placeholder = "Такой пользователь уже был добавлен ранее";
+                }
+        }
         };
         xhr.open("POST", "../PHP/addStudent.php", true); 
         // Отправляем запрос на сервер
@@ -236,7 +290,10 @@ function teacherPersonalAccount()
             for(let i = 0; i < jsonDataUser.length; i++) // Если данных больше чем один добавить остальных учеников (Имена)
             {
                 let nameStudent = document.createElement("div");
-                nameStudent.textContent = "Ученик: " + jsonDataUser[i].name;
+                nameStudent.style.borderTop = "1px dashed black";
+                nameStudent.style.paddingTop = "5px";
+                nameStudent.style.marginTop = "5px";
+                nameStudent.textContent = "Ученик: " + "Id: " + jsonDataUser[i].userId + " Name: " + jsonDataUser[i].name;
                 nameStudent.id = jsonDataUser[i].userId;
                 personalAccount.appendChild(nameStudent);
             }

@@ -76,6 +76,11 @@
     width: auto;
     height: auto;
 }
+#containerForTests{
+    border-top: 1px dashed black;
+    margin-top: 5px;
+    padding-top: 5px;
+}
 /* ==================================================================================================== */
 /* О сайте */
 
@@ -86,5 +91,20 @@
     border: none;
     width: auto;
     margin-left: 10px;
+}
+#personalAccount{
+    border-top: 1px solid black;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+#containerForLaboratoryWorks{
+    border-top: 1px dashed black;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+#personalAccountStudent{
+    border-top: 1px solid black;
+    margin-top: 5px;
+    padding-top: 5px;
 }
 /* ==================================================================================================== */

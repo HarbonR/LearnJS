@@ -115,7 +115,11 @@ personalArea.onclick = function(){
         if(sessionStorage.getItem("teacher") == "0")
             userPersonalAccount();
         else if(sessionStorage.getItem("teacher") == "1")
+        {
+            userPersonalAccount();
             teacherPersonalAccount();
+        }
+            
     };
     xhr.open('GET', '../Pages/personalArea.php');
     xhr.send();
