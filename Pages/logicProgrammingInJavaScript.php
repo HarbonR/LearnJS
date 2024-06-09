@@ -1,10 +1,12 @@
-<div style="font-size: 26px;">
+<div style="font-size: 20px;">
   <img src="/Picture/logicProgrammingInJavaScript.png" alt="" style="width: 60%;">
   <br>
-  <br>JavaScript - это универсальный язык программирования,
-  <br>который позволяет разработчикам создавать
-  <br>динамические и интерактивные веб-страницы.<br>
-
+  <div style="font-size: 23px;">
+    <br>JavaScript - это универсальный язык программирования,
+    <br>который позволяет разработчикам создавать
+    <br>динамические и интерактивные веб-страницы.<br>
+  </div>
+  
   <br>Одним из основополагающих элементов программирования на
   <br>JavaScript является применение логических операций для принятия
   <br>решений и управления ходом выполнения программы.<br>
@@ -18,96 +20,97 @@
   <br>выполнять операции со значениями или выражениями, играя
   <br>решающую роль в эффективном принятии решений в коде.<br>
 
-  <br>Основными логическими операторами являются <p style="display: inline; background-color: lightgray; padding: 4px;">&&</p> (И),
-  <p style="display: inline; background-color: lightgray; padding: 4px;">||</p> (ИЛИ) и <p style="display: inline; background-color: lightgray; padding: 4px;">!</p>
+  <br>Основными логическими операторами являются <p style="display: inline; background-color: #eeeef0; padding: 4px;">&&</p> (И),
+  <p style="display: inline; background-color: #eeeef0; padding: 4px;">||</p> (ИЛИ) и <p style="display: inline; background-color: #eeeef0; padding: 4px;">!</p>
   <br>(НЕ). Давайте теперь рассмотрим каждый из них.<br>
 
-  <br><b>1. Оператор AND (<p style="display: inline; background-color: lightgray; padding: 4px;">&&</p>)</b><br>
-  Оператор AND (<p style="display: inline; background-color: lightgray; padding: 4px;">&&</p>) в JavaScript - это логический оператор, который
-  <br>объединяет два или более условия. Он возвращает значение <p style="display: inline; background-color: lightgray; padding: 4px;">true</p> только в
+  <br><b>1. Оператор AND (<p style="display: inline; background-color: #eeeef0; padding: 4px;">&&</p>)</b><br><br>
+  Оператор AND (<p style="display: inline; background-color: #eeeef0; padding: 4px;">&&</p>) в JavaScript - это логический оператор, который
+  <br>объединяет два или более условия. Он возвращает значение <p style="display: inline; background-color: #eeeef0; padding: 4px;">true</p> только в
   <br>том случае, если выполняются все оцениваемые условия
-  <br><p style="display: inline; background-color: lightgray; padding: 4px;">true</p>. Если какое-либо из условий равно 
-  <p style="display: inline; background-color: lightgray; padding: 4px;">false</p>, все выражение
-  <br>принимает значение <p style="display: inline; background-color: lightgray; padding: 4px;">false</p>.<br>
+  <br><p style="display: inline; background-color: #eeeef0; padding: 4px;">true</p>. Если какое-либо из условий равно 
+  <p style="display: inline; background-color: #eeeef0; padding: 4px;">false</p>, все выражение
+  <br>принимает значение <p style="display: inline; background-color: #eeeef0; padding: 4px;">false</p>.<br>
 
-  <br><b>Пример:</b>
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br><p style="display: inline; color: blue;">let</p> isSunny = <p style="display: inline; color: purple;">true;</p>
-  <br><p style="display: inline; color: blue;">let</p> isWarm = <p style="display: inline; color: purple;">true;</p>
+  <br><b>Пример:</b><br><br>
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> isSunny = <p style="display: inline; color: #990055;">true;</p>
+  <br><p style="display: inline; color: #0077aa;">let</p> isWarm = <p style="display: inline; color: #990055;">true;</p>
   <br>
-  <br><p style="display: inline; color: blue;">if</p> (isSunny <p style="display: inline; color: brown;">&&</p> isWarm) {
-    <br><p style="display: inline; padding-left: 10px;">console.</p><p style="display: inline; color: red;">log</p>(<p style="display: inline; color: green;">"Perfect weather for outdoor activities!"</p>);
-    <br>} <p style="display: inline; color: blue;">else</p> {
-      <br><p style="display: inline; padding-left: 10px;">console.</p><p style="display: inline; color: red;">log</p>(<p style="display: inline; color: green;">"Maybe another day."</p>);
+  <br><p style="display: inline; color: #0077aa;">if</p> (isSunny <p style="display: inline; color: brown;">&&</p> isWarm) {
+    <br><p style="display: inline; padding-left: 10px;">console.</p><p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Perfect weather for outdoor activities!"</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br><p style="display: inline; padding-left: 10px;">console.</p><p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Maybe another day."</p>);
       <br>}
   </div>
 
-  <br>В этом примере <p style="display: inline; background-color: lightgray; padding: 4px;">isSunny && isWarm </p>
+  <br>В этом примере <p style="display: inline; background-color: #eeeef0; padding: 4px;">isSunny && isWarm </p>
   условие должно быть истинным 
-  <br>для отображения сообщения об идеальной погоде. Если или <p style="display: inline; background-color: lightgray; padding: 4px;">isSunny</p>
-  <br>или <p style="display: inline; background-color: lightgray; padding: 4px;">isWarm</p> имеет значение <p style="display: inline; background-color: lightgray; padding: 4px;">false</p>
-  , то <p style="display: inline; background-color: lightgray; padding: 4px;">else</p> выполняется блок.<br>
+  <br>для отображения сообщения об идеальной погоде. Если или <p style="display: inline; background-color: #eeeef0; padding: 4px;">isSunny</p>
+  <br>или <p style="display: inline; background-color: #eeeef0; padding: 4px;">isWarm</p> имеет значение <p style="display: inline; background-color: #eeeef0; padding: 4px;">false</p>
+  , то <p style="display: inline; background-color: #eeeef0; padding: 4px;">else</p> выполняется блок.<br>
 
   <br>Давайте рассмотрим некоторые сценарии, когда оператор AND особенно полезен.<br>
-
-  <b>При объединении условий:</b> Используйте <p style="display: inline; background-color: lightgray; padding: 4px;">&&</p>, 
+  <br>
+  <b>При объединении условий:</b> Используйте <p style="display: inline; background-color: #eeeef0; padding: 4px;">&&</p>, 
   когда вы хотите, 
   <br>чтобы действие выполнялось только при одновременном выполнении 
   <br>нескольких условий.
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>if (userIsLoggedIn && userHasPermission) {
-    <br>// Perform a privileged action.
-    <br>} else {
-      <br>// Display an error message or redirect to login.
+  <br><br>
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">if</p> (userIsLoggedIn <p style="display: inline; color: brown;">&&</p> userHasPermission) {
+    <br><p style="display: inline; color: #afa4ac;">// Perform a privileged action.</p>
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br><p style="display: inline; color: #afa4ac;">// Display an error message or #dd4a68irect to login.</p>
       <br>}
   </div>
-  <b>В защитных предложениях:</b> Используйте <p style="display: inline; background-color: lightgray; padding: 4px;">&&</p>в защитных 
+  <br><b>В защитных предложениях:</b> Используйте <p style="display: inline; background-color: #eeeef0; padding: 4px;">&&</p>в защитных 
   <br>предложениях, чтобы убедиться, что выполняются определенные 
   <br>условия, прежде чем приступить к дальнейшему выполнению кода.
-
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
+  <br><br>
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
   <br>function performAction(user) {
-    <br>if (!user || !user.isLoggedIn) {
-      <br>return; // Exit early if the user is not logged in.
+    <br><p style="display: inline; color: #0077aa;">if</p> (!user <p style="display: inline; color: brown;">||</p> !user.isLoggedIn) {
+      <br>return; <p style="display: inline; color: #afa4ac;">// Exit early if the user is not logged in.</p>
       <br>}
       <br>
-      <br>// Continue with the action for logged-in users.
+      <br><p style="display: inline; color: #afa4ac;">// Continue with the action for logged-in users.</p>
       <br>}
   </div>
-  <br>Для проверки формы: В сценариях, подобных проверке формы, вы 
+  <br><b>Для проверки формы:</b> В сценариях, подобных проверке формы, вы 
   <br>можете использовать && для проверки нескольких условий, прежде 
-  <br>чем разрешить отправку формы.
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>if (isUsernameValid && isPasswordValid && isEmailValid) {
-    <br>// Submit the form.
-    <br>} else {
-      <br>// Display an error message.
+  <br>чем разрешить отправку формы.<br><br>
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">if</p> (isUsernameValid <p style="display: inline; color: brown;">&&</p> isPasswordValid <p style="display: inline; color: brown;">&&</p> isEmailValid) {
+    <br><p style="display: inline; color: #afa4ac;">// Submit the form.</p>
+    <br>}<p style="display: inline; color: #0077aa;">else</p> {
+      <br><p style="display: inline; color: #afa4ac;">// Display an error message.</p>
       <br>}<br>
-  </div>
+  </div><br>
   Оператор AND полезен, когда вы хотите убедиться, что все указанные 
   <br>условия верны, прежде чем приступить к определенному действию 
   <br>или решению в вашем коде. Это фундаментальный инструмент для 
   <br>создания более тонкой и зависящей от контекста логики в ваших 
   <br>программах на JavaScript.
-
-  2. Оператор OR (<p style="display: inline; background-color: lightgray; padding: 4px;">||</p>)
-  Оператор OR (<p style="display: inline; background-color: lightgray; padding: 4px;">||</p>) в JavaScript - это логический оператор , который 
+  <br><br>
+  <b>2. Оператор OR (<p style="display: inline; background-color: #eeeef0; padding: 4px;">||</p>)</b><br><br>
+  Оператор OR (<p style="display: inline; background-color: #eeeef0; padding: 4px;">||</p>) в JavaScript - это логический оператор , который 
   <br>возвращает значение true , если хотя бы одно из условий , с которыми 
   <br>он связывается , равно true. Это часто используется, когда вы хотите, 
   <br>чтобы действие выполнялось при выполнении любого из нескольких 
   <br>условий.
+  <br>
+  <br>Вот простой пример, иллюстрирующий оператор OR:<br><br>
 
-  <br>Вот простой пример, иллюстрирующий оператор OR:<br>
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> hasCoffee = <p style="display: inline; color: #990055;">true</p>;
+  <br><p style="display: inline; color: #0077aa;">let</p> hasTea = <p style="display: inline; color: #990055;">false</p>;
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-    let hasCoffee = true;
-    let hasTea = false;
-
-    if (hasCoffee || hasTea) {
-      console.log("You can enjoy a hot beverage!");
-    } else {
-      console.log("No hot beverage available.");
-    }
+  <br><p style="display: inline; color: #0077aa;">if</p> (hasCoffee <p style="display: inline; color: brown;">||</p> hasTea) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"You can enjoy a hot beverage!"</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"No hot beverage available."</p>);
+      <br>}
   </div>
 
   <br>В этом примере hasCoffee || hasTea условие выполняется true 
@@ -117,89 +120,89 @@
   <br>Вот несколько сценариев, в которых вы можете захотеть использовать 
   <br>оператор OR:<br>
 
-  <br>Резервные значения:<br>
+  <br><b>Резервные значения:</b><br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-    let userInput = ""; // User didn't provide a value
-    let username = userInput || "Guest";
-    console.log("Welcome, " + username);
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> userInput = <p style="display: inline; color: #669900;">""</p>; <p style="display: inline; color: #afa4ac;">// User didn't provide a value</p>
+  <br><p style="display: inline; color: #0077aa;">let</p> username = userInput <p style="display: inline; color: brown;">||</p> <p style="display: inline; color: #669900;">"Guest"</p>;
+  <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Welcome, " + username</p>);
   </div>
 
   <br>В этом случае, если пользователь не указал имя пользователя 
   <br>(userInput это пустая строка), оператор OR присваивает значение по 
   <br>умолчанию "Guest" username. Это распространенный шаблон для 
   <br>предоставления резервных значений или значений по умолчанию.
+  <br>
+  <br><b>Проверка на наличие нескольких условий:</b><br><br>
 
-  <br>Проверка на наличие нескольких условий:<br>
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> isWeekend = <p style="display: inline; color: #990055;">false</p>;
+  <br><p style="display: inline; color: #0077aa;">let</p> isHoliday = <p style="display: inline; color: #990055;">true</p>;
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-    let isWeekend = false;
-    let isHoliday = true;
-
-    if (isWeekend || isHoliday) {
-      console.log("It's time for a break!");
-    } else {
-      console.log("Back to work.");
-    }
+  <br><p style="display: inline; color: #0077aa;">if</p> (isWeekend <p style="display: inline; color: brown;">||</p> isHoliday) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"It's time for a break!"</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Back to work."</p>);
+      <br>}
   </div>
 
   <br>В этом примере используется оператор OR, чтобы проверить, 
   <br>выходные сегодня или праздничный день, указывая, что пришло время 
   <br>для перерыва.
+  <br>
+  <br><b>Проверка формы:</b><br><br>
 
-  <br>Проверка формы:<br>
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> username = <p style="display: inline; color: #669900;">"john_doe"</p>;
+  <br><p style="display: inline; color: #0077aa;">let</p> password = <p style="display: inline; color: #669900;">""</p>;
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-    let username = "john_doe";
-    let password = "";
-
-    if (username && password) {
-      console.log("Form submitted successfully!");
-    } else {
-      console.log("Please fill in both username and password.");
-    }
+  <br><p style="display: inline; color: #0077aa;">if</p> (username <p style="display: inline; color: brown;">&&</p> password) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Form submitted successfully!"</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Please fill in both username and password."</p>);
+      <br>}
   </div>
 
   <br>Здесь оператор OR можно использовать для проверки отсутствия 
   <br>имени пользователя или пароля. Если любое из условий имеет 
   <br>значение true, пользователю предлагается заполнить оба поля.
-
+  <br>
   <br>Оператор OR полезен, когда вы хотите, чтобы действие выполнялось, 
   <br>если хотя бы одно из указанных условий истинно. Она обычно 
   <br>используется в сценариях, включающих резервные значения, проверку 
   <br>нескольких условий или проверку формы, где необходимо заполнить 
   <br>любое из нескольких полей.
-
-  <br>3. Оператор NOT (!)
+  <br>
+  <br><b>3. Оператор NOT (!)</b><br>
   <br>Оператор NOT (!) в JavaScript - это унарный оператор, который 
   <br>отрицает истинность значения. Он используется для инвертирования 
   <br>логического значения или истинностного / ложного выражения. Проще 
   <br>говоря, это превращается true в false и false в true. Вот как это 
-  <br>работает:<br>
+  <br>работает:<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-    let isSunny = true;
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> isSunny = <p style="display: inline; color: #990055;">true</p>;
 
-    // Using NOT operator to invert the value
-    let isNotSunny = !isSunny;
+  <br><p style="display: inline; color: #afa4ac;">// Using NOT operator to invert the value</p>
+  <br><p style="display: inline; color: #0077aa;">let</p> isNotSunny = !isSunny;
 
-    console.log(isNotSunny); // Output: false
+  <br>console.<p style="display: inline; color: #dd4a68;">log</p>(isNotSunny); <p style="display: inline; color: #afa4ac;">// Output: false</p>
   </div>
 
   <br>Теперь давайте обсудим, когда вы, возможно, захотите использовать 
   <br>оператор NOT:
+  <br>
+  <br><b>Проверка на отрицание:</b> Оператор NOT проще всего использовать, 
+  <br>когда вы хотите проверить отрицание условия. Например:<br><br>
 
-  <br>Проверка на отрицание: Оператор NOT проще всего использовать, 
-  <br>когда вы хотите проверить отрицание условия. Например:<br>
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> isRaining = <p style="display: inline; color: #990055;">false</p>;
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-    let isRaining = false;
-
-    if (!isRaining) {
-      console.log("It's not raining. Enjoy the day!");
-    } else {
-      console.log("Don't forget your umbrella!");
-    }
+  <br><p style="display: inline; color: #0077aa;">if</p> (!isRaining) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"It's not raining. Enjoy the day!"</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Don't forget your umbrella!"</p>);
+      <br>}
   </div>
 
   <br>В данном случае !isRaining условие истинно, когда нет дождя. Оно 
@@ -210,31 +213,31 @@
   <br>проверки ложности значения. Помните, что в JavaScript определенные 
   <br>значения считаются ложными, такие как false, 0, null, undefined, 
   <br>NaN, "",, и пустая строка,,,,. Оператор NOT может быть удобен для 
-  <br>проверки, содержит ли переменная ложное значение:
+  <br>проверки, содержит ли переменная ложное значение:<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-    let userRole = null;
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> userRole = <p style="display: inline; color: #0077aa;">null</p>;
 
-    if (!userRole) {
-      console.log("User role is not defined. Assigning a default role.");
-      userRole = "Guest";
-    }
+  <br><p style="display: inline; color: #0077aa;">if</p> (!userRole) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"User role is not defined. Assigning a default role."</p>);
+    <br>userRole = <p style="display: inline; color: #669900;">"Guest"</p>;
+    <br>}
   </div>
 
   <br>В этом примере, если userRole is null (ложное значение), условие 
   <br>!userRole принимает значение true, и назначается роль по 
   <br>умолчанию.
-
-  <br>Создание более четких условий: Оператор NOT также можно 
+  <br>
+  <br><b>Создание более четких условий:</b> Оператор NOT также можно 
   <br>использовать, чтобы сделать условия более явными или 
-  <br>удобочитаемыми. Например:<br>
+  <br>удобочитаемыми. Например:<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-    let isLoggedIn = false;
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> isLoggedIn = <p style="display: inline; color: #990055;">false</p>;
 
-    if (!isLoggedIn) {
-      console.log("User is not logged in. Redirect to login page.");
-    }
+  <br><p style="display: inline; color: #0077aa;">if</p> (!isLoggedIn) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"User is not logged in. #dd4a68irect to login page."</p>);
+    <br>}
   </div>
 
   <br>Это условие проверяет, не вошел ли пользователь в систему, и 
@@ -244,13 +247,13 @@
   <br>значение или проверить наличие ложных значений, предоставляя 
   <br>краткий и читаемый способ выражения условий в вашем коде 
   <br>JavaScript.
-
-  <br>Как комбинировать логические 
-  <br>операторы
+  <br>
+  <br><b>Как комбинировать логические 
+  <br>операторы</b><br>
   <br>Вы можете комбинировать логические операторы для создания более 
   <br>сложных условий, вводя круглые скобки для управления порядком 
   <br>вычисления.
-
+  <br>
   <br>Давайте рассмотрим пример, в котором мы хотим определить, имеет 
   <br>ли человек право на вступление в клуб, исходя из его возраста и 
   <br>наличия у него действительного удостоверения личности. Условия для 
@@ -265,16 +268,16 @@
     <li>Если участнику меньше 16 лет, вход запрещен.</li>
   </ul>
 
-  <br>Вот код JavaScript для этого сценария:<br>
+  <br>Вот код JavaScript для этого сценария:<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let age = 17;
-  <br>let hasValidID = false;
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> age = 17;
+  <br><p style="display: inline; color: #0077aa;">let</p> hasValidID = <p style="display: inline; color: #990055;">false</p>;
 
-  <br>if ((age >= 18) || (age >= 16 && hasValidID)) {
-    <br>console.log("Welcome to the club!");
-    <br>} else {
-      <br>console.log("Entry not allowed.");
+  <br><p style="display: inline; color: #0077aa;">if</p> ((age >= 18) <p style="display: inline; color: brown;">||</p> (age >= 16 <p style="display: inline; color: brown;">&&</p> hasValidID)) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Welcome to the club!"</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Entry not allowed."</p>);
       <br>}
   </div>
   <br>В этом коде:
@@ -302,9 +305,9 @@
   </ol>
 
   <br>Поскольку обе части условия являются false, выполняется блок кода 
-  <br>внутри else инструкции, результатом чего является вывод:
+  <br>внутри else инструкции, результатом чего является вывод:<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
+  <div style="padding: 20px 0 20px 20px; background-color: #eeeef0;">
     Entry not allowed.
   </div>
 
@@ -312,26 +315,26 @@
   <br>комбинировать для создания сложных условий, позволяя вам 
   <br>управлять потоком вашей программы на основе различных факторов.
 
-  <br>Условные операторы
+  <br><br><b>Условные операторы</b><br>
 
   <br>Логические операторы часто используются в условных операторах 
   <br>(if, else if и else) для управления ходом выполнения программы 
   <br>на основе конкретных условий.
 
-  <br>1. Оператор if:
+  <br><br><b>1. Оператор if:</b><br>
   <br>Оператор if в JavaScript используется для выполнения блока кода, 
   <br>если указанное условие истинно. Логические операторы часто играют 
-  <br>решающую роль в определении этих условий.
+  <br>решающую роль в определении этих условий.<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-    let isHungry = true;
-    let hasFood = true;
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> isHungry = <p style="display: inline; color: #990055;">true</p>;
+  <br><p style="display: inline; color: #0077aa;">let</p> hasFood = <p style="display: inline; color: #990055;">true</p>;
 
-    if (isHungry && hasFood) {
-      console.log("Let's have a meal!");
-    } else {
-      console.log("No need for a meal right now.");
-    }
+  <br><p style="display: inline; color: #0077aa;">if</p> (isHungry <p style="display: inline; color: brown;">&&</p> hasFood) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Let's have a meal!"</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"No need for a meal right now."</p>);
+      <br>}
   </div>
 
   <br>В этом примере оператор && (AND) объединяет два условия (isHungry 
@@ -339,17 +342,17 @@
   <br>в том случае, если оба условия истинны. Если либо isHungry, либо 
   <br>hasFood равно false, будет выполняться код внутри else блока.
 
-  <br>2. Оператор else:
+  <br><br><b>2. Оператор else:</b><br>
   <br>Оператор else соединяется с оператором if для выполнения блока 
-  <br>кода, когда указанное условие равно false .
+  <br>кода, когда указанное условие равно false .<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let isNight = true;
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> isNight = <p style="display: inline; color: #990055;">true</p>;
 
-  <br>if (isNight) {
-    <br>console.log("It's nighttime. Sleep tight!");
-    <br>} else {
-      <br>console.log("It's daytime. Enjoy your day!");
+  <br><p style="display: inline; color: #0077aa;">if</p> (isNight) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"It's nighttime. Sleep tight!"</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"It's daytime. Enjoy your day!"</p>);
       <br>}
   </div>
 
@@ -358,19 +361,19 @@
   <br>false, else выполняется блок, предоставляющий альтернативное 
   <br>сообщение для дневного времени.
 
-  <br>3. Оператор else if:
+  <br><br><b>3. Оператор else if:</b><br>
   <br>Оператор else if учитывает множество условий, позволяя принимать 
-  <br>более сложные решения.
+  <br>более сложные решения.<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let timeOfDay = "morning";
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> timeOfDay = <p style="display: inline; color: #669900;">"morning"</p>;
 
-  <br>if (timeOfDay === "morning") {
-    <br>console.log("Good morning!");
-    <br>} else if (timeOfDay === "afternoon") {
-      <br>console.log("Good afternoon!");
-      <br>} else {
-        <br>console.log("Good evening!");
+  <br><p style="display: inline; color: #0077aa;">if</p> (timeOfDay === <p style="display: inline; color: #669900;">"morning"</p>) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Good morning!"</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else if</p> (timeOfDay === <p style="display: inline; color: #669900;">"afternoon"</p>) {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Good afternoon!"</p>);
+      <br>} <p style="display: inline; color: #0077aa;">else</p> {
+        <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Good evening!"</p>);
         <br>}
   </div>
 
@@ -384,12 +387,12 @@
   <br>в операторах if, else и else if для управления потоком работы 
   <br>программы JavaScript на основе конкретных условий.
 
-  <br>Троичный оператор
+  <br><br><b>Троичный оператор</b><br>
   <br>Троичный оператор, часто обозначаемый как ? :, предоставляет 
   <br>краткий способ выражения условных выражений. Это сокращенная 
-  <br>версия if-else оператора. Базовый синтаксис таков:
+  <br>версия if-else оператора. Базовый синтаксис таков:<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
+  <div style="padding: 20px 0 20px 20px; background-color: #eeeef0;">
     condition ? expression_if_true : expression_if_false;
   </div>
 
@@ -410,10 +413,10 @@
     </li>
   </ul>
 
-  <br>Теперь давайте подробнее рассмотрим приведенный пример:
+  <br>Теперь давайте подробнее рассмотрим приведенный пример:<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-    const weather = isSunny ? "Enjoy the sunshine!" : "Grab an umbrella!";
+  <div style="padding: 20px 0 20px 20px; background-color: #eeeef0;">
+    const weather = isSunny ? <p style="display: inline; color: #669900;">"Enjoy the sunshine!"</p> : <p style="display: inline; color: #669900;">"Grab an umbrella!"</p>;
   </div>
 
   <br>В этом примере:
@@ -432,14 +435,14 @@
   </ul>
 
   <br>Это можно рассматривать как сокращенный способ написания if-
-  <br>else оператора. Эквивалентный if-else оператор для примера будет:<br>
+  <br>else оператора. Эквивалентный if-else оператор для примера будет:<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let weather;
-  <br>if (isSunny) {
-    <br>weather = "Enjoy the sunshine!";
-    <br>} else {
-      <br>weather = "Grab an umbrella!";
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> weather;
+  <br><p style="display: inline; color: #0077aa;">if</p> (isSunny) {
+    <br>weather = <p style="display: inline; color: #669900;">"Enjoy the sunshine!"</p>;
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br>weather = <p style="display: inline; color: #669900;">"Grab an umbrella!"</p>;
       <br>}
   </div>
 
@@ -451,94 +454,94 @@
   <br>или в сложных сценариях может снизить читаемость кода, поэтому его 
   <br>лучше всего использовать для простых условий.
 
-  <br>Оператор Switch
+  <br><br><b>Оператор Switch</b><br>
   <br>Оператор switch эффективно обрабатывает множество условий, 
   <br>особенно когда у переменной есть несколько возможных значений. 
-  <br>Расширяем наш пример с днем недели.:
+  <br>Расширяем наш пример с днем недели.:<br><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let dayOfWeek = "Wednesday";
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> dayOfWeek = <p style="display: inline; color: #669900;">"Wednesday"</p>;
 
-  <br>switch (dayOfWeek) {
-    <br>case "Monday":
-      <br>console.log("It's the beginning of the week.");
-      <br>break;
-      <br>case "Wednesday":
-        <br>console.log("It's the middle of the week.");
-        <br>break;
-        <br>case "Friday":
-          <br>console.log("It's the end of the week.");
-          <br>break;
-          <br>default:
-          <br>console.log("It's an ordinary day.");
+  <br><p style="display: inline; color: #0077aa;">switch</p> (dayOfWeek) {
+    <br><p style="display: inline; color: #0077aa;">case</p> "Monday":
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"It's the beginning of the week."</p>);
+      <br><p style="display: inline; color: #0077aa;">break</p>;
+      <br><p style="display: inline; color: #0077aa;">case</p> "Wednesday":
+        <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"It's the middle of the week."</p>);
+        <br><p style="display: inline; color: #0077aa;">break</p>;
+        <br><p style="display: inline; color: #0077aa;">case</p> "Friday":
+          <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"It's the end of the week."</p>);
+          <br><p style="display: inline; color: #0077aa;">break</p>;
+          <br><p style="display: inline; color: #0077aa;">default</p>
+          <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"It's an ordinary day."</p>);
           <br>}
   </div>
 
   <br>Здесь оператор switch запускает соответствующее сообщение в 
   <br>зависимости от дня недели.
 
-  <br>Оценка короткого замыкания
+  <br><br><b>Оценка короткого замыкания</b><br>
   <br>JavaScript использует вычисление короткого замыкания с помощью 
   <br>логических операторов, оптимизируя производительность за счет 
   <br>остановки вычисления после определения результата.
 
-  <br>Пример 1: Короткое замыкание с помощью && 
-  <br>оператора<br>
+  <br><br><b>Пример 1: Короткое замыкание с помощью && 
+  <br>оператора<br></b><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let isTrue = false;
-  <br>let result = isTrue && someFunction();
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> isTrue = <p style="display: inline; color: #990055;">false</p>;
+  <br><p style="display: inline; color: #0077aa;">let</p> result = isTrue <p style="display: inline; color: brown;">&&</p> someFunction();
 
-  <br>console.log(result); // `someFunction()` is not called if `isTrue` is false
+  <br>console.<p style="display: inline; color: #dd4a68;">log</p>(result); <p style="display: inline; color: #afa4ac;">// `someFunction()` is not called if `isTrue` is false</p>
   </div>
 
   <br>В этом примере someFunction() вызывается только в том случае, если 
   <br>isTrue имеет значение true, демонстрируя эффективность 
   <br>вычисления короткого замыкания.
 
-  <br>Пример 2: Короткое замыкание с помощью || 
-  оператора<br>
+  <br><br><b>Пример 2: Короткое замыкание с помощью || 
+  оператора<br></b><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let isLoggedIn = false;
-  <br>let username = isLoggedIn || "Guest";
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> isLoggedIn = <p style="display: inline; color: #990055;">false</p>;
+  <br><p style="display: inline; color: #0077aa;">let</p> username = isLoggedIn <p style="display: inline; color: brown;">||</p> <p style="display: inline; color: #669900;">"Guest"</p>;
 
-  <br>console.log("Welcome, " + username); // If not logged in, the default username is "Guest"
+  <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Welcome, "</p> + username); <p style="display: inline; color: #afa4ac;">// If not logged in, the default username is "Guest"</p>
   </div>
 
   <br>Здесь username присваивается значение по умолчанию "Guest" только 
   <br>в том случае, если пользователь не вошел в систему, благодаря оценке 
   <br>короткого замыкания.
 
-  <br>Истинные и ложные значения
+  <br><br><b>Истинные и ложные значения</b><br>
   <br>В JavaScript логические операторы могут использоваться с 
   <br>нелогическими значениями. Понимание истинных и ложных значений 
   <br>имеет решающее значение в таких сценариях.
 
-  <br>Обзор истинных и ложных значений
+  <br><br><b>Обзор истинных и ложных значений</b><br>
   <br>Каждому значению в JavaScript присуща истинность или ложность. 
   <br>Ложные значения включают в себя false, 0, null, undefined NaN, "" и 
   <br>пустую строку (,,,). Истинностные значения охватывают все значения, 
   <br>которые явно не являются ложными.
 
-  <br>Пример: Истинные и ложные значения<br>
+  <br><br><b>Пример: Истинные и ложные значения<br></b><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let userRole = ""; // An empty string is falsy
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> userRole = ""; <p style="display: inline; color: #afa4ac;">// An empty string is falsy</p>
 
-  <br>let roleMessage = userRole || "User";
+  <br><p style="display: inline; color: #0077aa;">let</p> roleMessage = userRole <p style="display: inline; color: brown;">||</p> <p style="display: inline; color: #669900;">"User"</p>;
 
-  <br>console.log("You are a " + roleMessage); // If `userRole` is falsy, default to "User"
+  <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"You are a "</p> + roleMessage); <p style="display: inline; color: #afa4ac;">// If `userRole` is falsy, default to "User"</p>
   </div>
 
   <br>Здесь значение по умолчанию "User" присваивается, roleMessage 
   <br>только если userRole значение false.
 
-  <br>Сводная таблица
+  <br><br><b>Сводная таблица</b><br>
   <br>Давайте дадим краткий справочник по различным логическим 
-  <br>операторам:
+  <br>операторам:<br><br>
 
-  <table style="border: 1px solid black; border-collapse: collapse;">
+  <table style="border: 1px solid black; border-collapse: collapse; text-align: center;">
     <tr>
       <th style="border: 1px solid black; border-collapse: collapse;">ОПЕРАТОР</th>
       <th style="border: 1px solid black; border-collapse: collapse;">СИМВОЛ</th>
@@ -561,37 +564,37 @@
     </tr>
   </table>
 
-  <br>Практические приложения
+  <br><b>Практические приложения</b><br>
   <br>Логические операторы играют решающую роль в реальных 
   <br>приложениях JavaScript. Вот несколько практических примеров:
 
-  <br>Проверка формы<br>
+  <br><br><b>Проверка формы<br></b><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let username = "JohnDoe";
-  <br>let password = "secretp@ss";
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> username = <p style="display: inline; color: #669900;">"JohnDoe"</p>;
+  <br><p style="display: inline; color: #0077aa;">let</p> password = <p style="display: inline; color: #669900;">"secretp@ss"</p>;
 
-  <br>if (username && password) {
-    <br>console.log("Form submitted successfully.");
-    <br>} else {
-      <br>console.log("Please enter both username and password.");
+  <br><p style="display: inline; color: #0077aa;">if</p> (username <p style="display: inline; color: brown;">&&</p> password) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Form submitted successfully."</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Please enter both username and password."</p>);
       <br>}
   </div>
 
   <br>В этом сценарии отправка формы проверяется путем указания имени 
   <br>пользователя и пароля.
 
-  <br>Адаптивный пользовательский интерфейс<br>
+  <br><br><b>Адаптивный пользовательский интерфейс<br></b><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let screenWidth = 800;
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> screenWidth = 800;
 
-  <br>if (screenWidth > 600 && screenWidth <= 1024) {
-    <br>console.log("Displaying a tablet-friendly layout.");
-    <br>} else if (screenWidth > 1024) {
-      <br>console.log("Displaying a desktop layout.");
-      <br>} else {
-        <br>console.log("Displaying a mobile-friendly layout.");
+  <br><p style="display: inline; color: #0077aa;">if</p> (screenWidth > 600 <p style="display: inline; color: brown;">&&</p> screenWidth <= 1024) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Displaying a tablet-friendly layout."</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> <p style="display: inline; color: #0077aa;">if</p> (screenWidth > 1024) {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Displaying a desktop layout."</p>);
+      <br>} <p style="display: inline; color: #0077aa;">else</p> {
+        <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Displaying a mobile-friendly layout."</p>);
         <br>}
   </div>
 
@@ -599,23 +602,23 @@
   <br>на основе ширины экрана, создавая адаптивный пользовательский 
   <br>интерфейс.
 
-  <br>Контроль доступа<br>
+  <br><br><b>Контроль доступа<br></b><br>
 
-  <div style="padding: 0 0 20px 20px; background-color: lightgray;">
-  <br>let userRole = "admin";
-  <br>let isLoggedIn = true;
+  <div style="padding: 0 0 20px 20px; background-color: #eeeef0;">
+  <br><p style="display: inline; color: #0077aa;">let</p> userRole = <p style="display: inline; color: #669900;">"admin"</p>;
+  <br><p style="display: inline; color: #0077aa;">let</p> isLoggedIn = <p style="display: inline; color: #990055;">true</p>;
 
-  <br>if (userRole === "admin" && isLoggedIn) {
-    <br>console.log("Access granted to admin dashboard.");
-    <br>} else {
-      <br>console.log("Access denied.");
+  <br><p style="display: inline; color: #0077aa;">if</p> (userRole === "admin" <p style="display: inline; color: brown;">&&</p> isLoggedIn) {
+    <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Access granted to admin dashboard."</p>);
+    <br>} <p style="display: inline; color: #0077aa;">else</p> {
+      <br>console.<p style="display: inline; color: #dd4a68;">log</p>(<p style="display: inline; color: #669900;">"Access denied."</p>);
       <br>}
   </div>
 
   <br>Логические операторы помогают контролировать доступ, проверяя как 
   <br>роль пользователя, так и статус входа в систему.
 
-  <br>Заключение
+  <br><br><b>Заключение</b><br>
   <br>Овладение логическими операторами является неотъемлемой частью 
   <br>написания эффективного и осмысленного кода JavaScript. Создаете ли 
   <br>вы условия, принимаете решения или управляете ходом выполнения 
