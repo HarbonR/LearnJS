@@ -108,5 +108,6 @@
     <script src="/JS/userAuthentication.js"></script>
     <script src="/JS/practice.js"></script>
     <script src="/JS/personalArea.js"></script>
+    <script src="/JS/javaScriptGuide.js"></script>
 </body>
 </html>

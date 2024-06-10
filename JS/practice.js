@@ -113,6 +113,8 @@ function createPassingTheTest(testId, subject, jsonDataQuestion)
     });
   
     let fieldset = document.createElement('fieldset');
+    fieldset.style.display = "flex";
+    fieldset.style.flexDirection = "column";
     let legend = document.createElement('legend');
     legend.textContent = subject;
     fieldset.appendChild(legend);
@@ -132,6 +134,8 @@ function createPassingTheTest(testId, subject, jsonDataQuestion)
       questionElement.id = jsonDataQuestion[i].idQuestion;
       questionElement.className = "questionElement";
       let questionText = document.createElement('p');
+      questionText.style.margin = "20px 0 0 0";
+      questionText.style.fontWeight = "900";
       questionText.textContent = question;
       questionElement.appendChild(questionText);
   
@@ -150,6 +154,10 @@ function createPassingTheTest(testId, subject, jsonDataQuestion)
     }
   
     let submitButton = document.createElement('button');
+    submitButton.style.alignSelf = "center";
+    submitButton.style.marginTop = "20px";
+
+    submitButton.style.backgroundColor = "#6CA300";
     submitButton.type = 'submit';
     submitButton.textContent = 'Отправить';
 
