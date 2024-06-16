@@ -59,6 +59,10 @@ javaScriptGuide.onclick = function(){
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
         body.innerHTML = this.responseText;
+        body.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
     };
     xhr.open('GET', '../Pages/javaScriptGuide.php');
     xhr.send();

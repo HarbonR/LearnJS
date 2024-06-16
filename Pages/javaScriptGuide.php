@@ -15,8 +15,8 @@
     <div>
         <b>Глава 2. Основы javascript</b>
         <ul>
-            <li class="link">Переменные и константы</li>
-            <li class="link">Типы данных</li>
+            <li onclick="variablesAndConstants()" class="link">Переменные и константы</li>
+            <li onclick="dataTypes()" class="link">Типы данных</li>
             <li class="link">Арифметические операции</li>
             <li class="link">Поразрядные операции</li>
             <li class="link">Условные выражения</li>
@@ -31,7 +31,7 @@
     <div>
         <b>Глава 3. Функциональное программирование</b>
         <ul>
-            <li class="link">Функции</li>
+            <li onclick="functions()" class="link">Функции</li>
             <li class="link">Параметры функции</li>
             <li class="link">Результат функции</li>
             <li class="link">Стрелочные функции</li>
