@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/Style/general.css">
     <link rel="stylesheet" href="/Style/menu.css">
     <link rel="stylesheet" href="/Style/enterRegister.css">
+    <link rel="stylesheet" href="/Style/mediaQueries.css">
 </head>
 <body>
     <div id="enter-register" style="display: none;">
